@@ -1,0 +1,669 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+img {
+  display: block;
+  margin: auto;
+}
+
+/*-----ESTILOS-----*/
+
+h1{
+    padding: 5rem;
+    color: #dc5de4;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    text-shadow: 0.1rem 0.1rem 0.1rem #441947;
+}
+a:link, a:visited, a:active, a:hover {
+  text-decoration:none;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+a:link{
+  color:black;
+}
+a:visited{
+  color: black;
+}
+a:hover{
+  color:#dc5de4;
+}
+header{
+  display: grid;
+  grid-template-rows: 2fr, 1fr;
+  justify-content: center;
+}
+header a img{
+  max-width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 2rem;
+}
+header div{
+  background-color: #f9b80a;
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  font-weight: bolder;
+  list-style: none;
+}
+.menu li{
+  padding: 1rem;
+}
+.inicio{
+  display: grid;
+  grid-template-rows: 2fr, 1fr;
+  grid-row-gap: 3rem;
+}
+.banner{
+  background-image: url(../img/fondoBanner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.banner a{
+  background-color: #dc5de4;
+  border-radius:1.5rem;
+  width: fit-content;
+  color:white;    
+  font-weight: bold;
+  padding: 1rem;
+  text-align: center;
+  align-self: center;
+
+.banner h2{
+  margin-bottom: 2%;
+  font-family: sans-serif;
+  font-size: 3rem;
+  text-align: center;
+}
+.destacado{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.5fr 2fr;
+  grid-template-areas: "titulo titulo titulo titulo" "producto1 producto2 producto3 producto4";
+  grid-gap: 1rem;
+  width: auto;
+  justify-items: center;
+  align-items: center;
+}
+.destacado h2{
+  grid-area: titulo;
+  text-align: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: #dc5de4;
+}
+.destacado div img{
+  width: 20rem;
+}
+#producto1{
+  grid-area: producto1;
+}
+#producto2{
+  grid-area: producto2;
+}
+#producto3{
+  grid-area: producto3;
+}
+#producto4{
+  grid-area: producto4;
+}
+.destacado div{
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  padding-bottom: 5rem;
+
+.footer{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: black;
+  padding: 2rem;
+}
+.redes{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.redes h2{
+  font-family: sans-serif;
+  text-align: right;
+  font-weight: lighter;
+  color: #f9b80a;
+}
+.iconoredes{
+  width: 2rem;
+  align-self: end;
+}
+  .cajamail h2{
+    font-family: sans-serif;
+    font-weight: lighter;
+    color: #f9b80a;
+  }
+  .email{
+    padding: 1%;
+  }
+  .botonmail {
+    padding: 1%;
+    font-family: sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    background-color: #dc5de4;
+    border-style: none;
+    color: white;
+    border-radius: 60px;
+  }
+  .botonmail:hover{
+    background-color: #dc5de4;
+    color: #000000;
+  }
+  .acercade{
+    display: grid;
+    grid-template-rows: 0.25fr, 1fr, 2fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "titulo titulo" "foto texto" "productos productos";
+    grid-gap: 1rem;
+    width: auto;
+    margin-bottom: 5rem;
+  }
+  .acercade h1{
+    grid-area: titulo;
+    text-align: center;
+  }
+  .acercade img{
+    grid-area: foto;
+    width: 20rem;
+  }
+  .acercade p{
+    grid-area: texto;
+    text-align: left;
+    padding-right: 5rem;
+    font-size: large;
+    line-height: 2rem;
+  }
+  #fotoproductos{
+    grid-area: productos;
+    width: auto;
+  }
+.catalogo{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 0.25fr, 1fr, 1fr, 1fr;
+  grid-template-areas: "titulo titulo titulo titulo" "prod1 prod2 prod3 prod4" "prod5 prod6 prod7 prod8" "prod9 prod10 prod11 prod12";
+  grid-column-gap: 1rem;
+  grid-row-gap: 4rem;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  width: auto;
+  margin-bottom: 5rem;
+  text-align: center;
+  font-weight: bold;
+}
+.catalogo h1{
+  grid-area: titulo;
+}
+
+#prod1{
+  grid-area: prod1;
+}
+#prod2{
+  grid-area: prod2;
+}
+#prod3{
+  grid-area: prod3;
+}
+#prod4{
+  grid-area: prod4;
+}
+#prod5{
+  grid-area: prod5;
+}
+#prod6{
+  grid-area: prod6;
+}
+#prod7{
+  grid-area: prod7;
+}
+#prod8{
+  grid-area: prod8;
+}
+#prod9{
+  grid-area: prod9;
+}
+#prod10{
+  grid-area: prod10;
+}
+#prod11{
+  grid-area: prod11;
+}
+#prod12{
+  grid-area: prod12;
+}
+.fotocat{
+  width: 20rem;
+}
+.contacto{
+  display: grid;
+  grid-template-rows: 0.5fr, 2fr;
+  grid-gap: 1rem;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  width: auto;
+  font-weight: bold;
+  background-color: white;
+  padding-bottom: 10rem;
+}
+.contacto h1{
+  color: white;
+}
+.contacto form{
+  font-family: sans-serif;
+  font-weight: lighter;
+  align-items: right;
+  line-height: 2rem;
+  font-size: large;
+}
+.contacto input{
+  margin-bottom: 1.5rem;
+}
+.botcontacto {
+  padding: 3%;
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #dc5de4;
+  border-style: none;
+  color: white;
+  border-radius: 60px;
+}
+.botcontacto:hover{
+  background-color: #dc5de4;
+  color: black;
+}
+.grillaproducto{
+  display: grid;
+  grid-template-rows: 0.5fr, 2fr;
+  grid-template-columns: 1fr, 2fr;
+  grid-gap: 1rem;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  width: auto;
+  grid-template-areas: "foto titulo" "foto texto";
+  margin: 4rem;
+}
+.grillaproducto img{
+  grid-area: foto;
+  width: 30rem;
+}
+.grillaproducto h2{
+  grid-area: titulo;
+  text-align: left;
+  justify-self: left;
+  font-size: 3rem;
+  font-family: sans-serif;
+  color: #dc5de4;
+}
+.grillaproducto div{
+  grid-area: texto;
+  text-align: left;
+  padding-right: 5rem;
+  font-size: large;
+  line-height: 1rem;
+  align-self: start;
+}
+.grillaproducto button{
+  padding: 0.5rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: #dc5de4;
+  border-style: none;
+  color: white;
+  border-radius: 60px;
+}
+.grillaproducto button:hover{
+  background-color: #dc5de4;
+  color: #000000;
+}
+
+  /*-----MEDIA QUERIES-----*/
+
+@media screen and (max-width: 768px) {
+  .banner{
+    padding: 5rem;
+  }
+  .banner h2{
+    font-size: 2.5rem;
+  }
+  .banner a{
+    padding: 0.8rem;
+  }
+  .destacado{
+    grid-template-columns: 384px 384px;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas: "titulo titulo" "producto1 producto2" "producto3 producto4";
+    grid-gap: 0rem;
+    margin-bottom:3rem
+  }
+  .destacado h2{
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+  .destacado div{
+    padding-bottom: 2rem;
+  }
+  .destacado div img{
+    width: 15rem;
+  }
+  .redes h2{
+    padding-bottom: 1rem;
+  }
+  .iconoredes{
+    display: inline;
+    margin-left: 1rem;
+    width: 2rem;
+    align-self: end;
+  }
+    .cajamail h2{
+      padding-bottom: 1rem;
+    }
+    .botonmail {
+      padding: 0.3rem;
+    }
+    .acercade img{
+      margin-top: 0rem;
+    }
+    .acercade p{
+      padding-right: 2rem;
+      line-height: 1.8rem;
+    }
+    .catalogo{
+      display: grid;
+      grid-template-columns: repeat(3, 256px);
+      grid-template-rows: 0.25fr, 1fr, 1fr, 1fr, 1fr;
+      grid-row-gap: 3rem;
+      grid-template-areas: "titulo titulo titulo" "prod1 prod2 prod3" "prod4 prod5 prod6" "prod7 prod8 prod9" "prod10 prod11 prod12";
+    }
+    .catalogo h1{
+      padding: 3rem;
+    }
+    .fotocat{
+      width: 15rem;
+    }
+    .grillaproducto{
+      margin: 3rem;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+    }
+    .grillaproducto img{
+      grid-area: foto;
+      width: 20rem;
+    }
+    .grillaproducto h2{
+      font-size: 2rem;
+    }
+    .grillaproducto div{
+      padding-right: 0rem;
+    }
+}
+@media screen and (max-width: 425px) {
+  header{
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+  }
+  header a img{
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+  }
+  .menu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    background-color: #f9be20;
+    font-weight: bold;
+    list-style: none;
+  }
+  .menu li{
+    text-align: center;
+    padding: 0.5rem;
+  }
+  .inicio{
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+    grid-row-gap: 1rem;
+  }
+  .banner{
+    background-image: url(../img/fondoBanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 100%;
+    padding: 2rem;
+  }
+  .banner h2{
+    margin-bottom: 2rem;
+    font-family: sans-serif;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .banner a{
+    background-color: #dc5de4;
+    border-radius:1.5rem;
+    width: fit-content;
+    color:white;    
+    font-weight: bold;
+    padding: 0.5rem;
+    text-align: center;
+    align-self: center;
+  }
+  .banner a:hover{
+    color: #000000;
+  }
+  .destacado{
+    display: grid;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-areas: "titulo titulo" "producto1 producto2" "producto3 producto4";
+    grid-gap: 0.5rem;
+    width: auto;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .destacado h2{
+    grid-area: titulo;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    color: #dc5de4;
+    padding: 1rem;
+  }
+  .destacado div img{
+    width: 5rem;
+  }
+  .destacado a{
+    font-size: small;
+  }
+  .destacado div{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    padding-bottom: 1rem;
+  }
+  .footer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: black;
+    padding: 1.5rem;
+    font-size: smaller;
+  }
+  .redes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: start;
+  }
+  .redes h2{
+    font-family: sans-serif;
+    text-align: right;
+    font-weight: lighter;
+    color: #f9b80a;
+  }
+  .redes div{
+    display: flex;
+    flex-direction: row;
+    padding-top: 1rem;
+  }
+  .iconoredes{
+    width: 2rem;
+    align-self: end;
+    margin-left: 1rem;
+  }
+    .cajamail h2{
+      font-family: sans-serif;
+      font-weight: lighter;
+      color: #f9b80a;
+      padding-bottom: 1rem;
+    }
+    .email{
+      margin-bottom: 1rem;
+    }
+    .acercade{
+    display: grid;
+    grid-template-rows: 0.25fr, 1fr, 2fr, 2fr;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "titulo titulo" "foto foto" "texto texto" "productos productos";
+    grid-gap: 1rem;
+    width: auto;
+    margin-bottom: 2rem;
+  }
+  .acercade h1{
+    grid-area: titulo;
+    text-align: center;
+    padding: 1rem;
+    padding-top: 3rem;
+  }
+  .acercade img{
+    grid-area: foto;
+    width: 15rem;
+  }
+  .acercade p{
+    grid-area: texto;
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: large;
+    line-height: 1.5rem;
+  }
+  #fotoproductos{
+    grid-area: productos;
+    width: 425px;
+  }
+    .catalogo{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 0.25fr, 1fr, 1fr, 1fr;
+      grid-template-areas: "titulo titulo" "prod1 prod2" "prod3 prod4" "prod5 prod6" "prod7 prod8" "prod9 prod10" "prod11 prod12";
+      grid-column-gap: 1rem;
+      grid-row-gap: 1rem;
+      justify-content: space-evenly;
+      justify-items: center;
+      align-items: center;
+      width: auto;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    .catalogo h1{
+      grid-area: titulo;
+      font-size: 2rem;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      padding-left: 0rem;
+      padding-right: 0rem;
+    }
+    .fotocat{
+      width: 5rem;
+    }
+  .contacto{
+  display: grid;
+  grid-template-rows: 0.5fr, 2fr;
+  grid-gap: 1rem;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  width: auto;
+  font-weight: bold;
+  background-image: url(../img/fondoContacto.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 1rem;
+  padding-bottom: 5rem;
+}
+.contacto h1{
+  font-size: 2rem;
+  padding: 0rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}  
+.grillaproducto{
+  display: grid;
+  grid-template-rows: 0.5fr, 2fr;
+  grid-template-columns: 1fr, 2fr, 2fr;
+  grid-gap: 1rem;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-items: center;
+  width: auto;
+  grid-template-areas: "titulo titulo" "foto foto" "texto texto";
+  margin: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.grillaproducto img{
+  grid-area: foto;
+  width: 15rem;
+}
+.grillaproducto h2{
+  grid-area: titulo;
+  text-align: center;
+  justify-self: center;
+  font-size: 2rem;
+  font-family: sans-serif;
+  color: #dc5de4;
+}
+.grillaproducto div{
+  grid-area: texto;
+  text-align: left;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  font-size: large;
+  line-height: 1.5rem;
+  align-self: center;
+}
+}
