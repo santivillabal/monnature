@@ -81,7 +81,12 @@ header div{
   padding: 1rem;
   text-align: center;
   align-self: center;
-
+  transition: transform, 1s;
+}
+.banner a:hover{
+  color: #000000;
+  transform: scale(1.25);
+}
 .banner h2{
   margin-bottom: 2%;
   font-family: sans-serif;
@@ -125,7 +130,11 @@ header div{
   font-weight: bold;
   font-size: large;
   padding-bottom: 5rem;
-
+  transition: transform, 1s;
+}
+.destacado div:hover{
+  transform: scale(1.25);
+}
 .footer{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -218,7 +227,12 @@ header div{
 .catalogo h1{
   grid-area: titulo;
 }
-
+.catalogo div{
+  transition: transform, 1s;
+}
+.catalogo div:hover{
+  transform: scale(1.25);
+}
 #prod1{
   grid-area: prod1;
 }
@@ -267,7 +281,8 @@ header div{
   align-items: center;
   width: auto;
   font-weight: bold;
-  background-color: white;
+  background: rgb(220,93,228);
+background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47%, rgba(220,93,228,1) 100%);
   padding-bottom: 10rem;
 }
 .contacto h1{
