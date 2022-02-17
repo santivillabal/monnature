@@ -21,7 +21,6 @@ h1{
 a:link, a:visited, a:active, a:hover {
   text-decoration:none;
   font-family: sans-serif;
-  font-size: 1rem;
 }
 a:link{
   color:black;
@@ -31,6 +30,14 @@ a:visited{
 }
 a:hover{
   color:#dc5de4;
+}
+.img-carrusel{
+  height: 300px;
+  object-fit: cover;
+}
+.texto-carrusel{
+  bottom: 37.5%;
+  color: #000000;
 }
 header{
   display: grid;
@@ -46,51 +53,49 @@ header a img{
 header div{
   background-color: #f9b80a;
 }
-.menu{
+.navbar{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-around;
   font-weight: bolder;
   list-style: none;
+  padding: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-.menu li{
-  padding: 1rem;
+.navbar li{
+  padding: 0.5rem;
+}
+.nav-link a:hover{
+    color:#dc5de4;
+}
+.me-auto {
+  margin-left: auto;
 }
 .inicio{
   display: grid;
   grid-template-rows: 2fr, 1fr;
   grid-row-gap: 3rem;
 }
-.banner{
-  background-image: url(../img/fondoBanner.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 10rem;
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-}
-.banner a{
+.texto-carrusel a{
   background-color: #dc5de4;
   border-radius:1.5rem;
   width: fit-content;
   color:white;    
   font-weight: bold;
-  padding: 1rem;
+  padding: 2%;
   text-align: center;
   align-self: center;
   transition: transform, 1s;
 }
-.banner a:hover{
+.texto-carrusel a:hover{
   color: #000000;
   transform: scale(1.25);
 }
-.banner h2{
+.texto-carrusel h2{
   margin-bottom: 2%;
   font-family: sans-serif;
-  font-size: 3rem;
   text-align: center;
 }
 .destacado{
@@ -136,8 +141,6 @@ header div{
   transform: scale(1.25);
 }
 .footer{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
   background-color: black;
   padding: 2rem;
 }
@@ -146,6 +149,10 @@ header div{
   flex-direction: column;
   align-items: flex-end;
   justify-content: space-between;
+}
+.redes div{
+  display: flex;
+  flex-direction: row;
 }
 .redes h2{
   font-family: sans-serif;
@@ -156,11 +163,13 @@ header div{
 .iconoredes{
   width: 2rem;
   align-self: end;
+  margin: 0.5rem;
 }
   .cajamail h2{
     font-family: sans-serif;
     font-weight: lighter;
     color: #f9b80a;
+    margin-bottom: 1rem;
   }
   .email{
     padding: 1%;
