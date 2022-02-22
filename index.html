@@ -6,13 +6,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/estilos.css">
-    <title>Inicio</title>
+    <title>Monnature cosmética natural</title>
 </head>
 <body>
     <header>
         <a href="index.html">
-            <img src="img/Logo 2.png" alt="Logo">
+            <img src="img/logo.png" alt="Logo">
         </a>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -71,32 +74,35 @@
           </div>
         <div class="destacado">
           <h2>Productos destacados</h2>
-            <div id="producto1">
-                <a href="./pages/producto.html"><img src="img/fotoProducto2.png" alt="foto de producto"></a>
-                <a href="./pages/producto.html" class="titproducto">Desodorante en crema</a>
-                <p>$1250</p>
-            </div>
-            <div id="producto2">
-                <a href="./pages/producto.html"><img src="./img/fotoProducto1.png" alt="foto de producto"></a>
-                <a href="./pages/producto.html" class="titproducto">Desmaquillante facial</a>
-                <p>$1250</p>
-            </div>
-            <div id="producto3">
-                <a href="./pages/producto.html"><img src="./img/fotoProducto4.png" alt="foto de producto"></a>
-                <a href="./pages/producto.html" class="titproducto">Crema calmante</a>
-                <p>$1250</p>
-            </div>
-            <div id="producto4">
-                <a href="./pages/producto.html"><img src="./img/fotoProducto3.png" alt="foto de producto"></a>
-                <a href="./pages/producto.html" class="titproducto">Crema para manos</a>
-                <p>$1250</p>
-            </div>
-          </div> 
+            <div class="container">
+              <div class="row">
+                <div class="col-6 col-md-3 prod">
+                    <a href="./pages/producto.html"><img src="img/fotoProducto2.png" alt="foto de producto"></a>
+                    <a href="./pages/producto.html" class="titproducto">Desodorante en crema</a>
+                    <p>$1250</p>
+                </div>
+                <div class="col-6 col-md-3 prod">
+                   <a href="./pages/producto.html"><img src="./img/fotoProducto1.png" alt="foto de producto"></a>
+                   <a href="./pages/producto.html" class="titproducto">Desmaquillante facial</a>
+                   <p>$1250</p>
+                </div>
+                <div class="col-6 col-md-3 prod">
+                    <a href="./pages/producto.html"><img src="./img/fotoProducto4.png" alt="foto de producto"></a>
+                   <a href="./pages/producto.html" class="titproducto">Crema calmante</a>
+                   <p>$1250</p>
+                </div>
+                <div class="col-6 col-md-3 prod">
+                    <a href="./pages/producto.html"><img src="./img/fotoProducto3.png" alt="foto de producto"></a>
+                   <a href="./pages/producto.html" class="titproducto">Crema para manos</a>
+                   <p>$1250</p>
+                </div>
+              </div>  
+            </div> 
         </div>
     </main>
     <footer class="footer container-fluid">
         <div class="row">
-            <div class="cajamail col-sm m-4 m-lg-4">
+            <div class="cajamail col col-md-5">
                 <h2>Recibí nuestras novedades en tu correo electrónico</h2>
                 <form>
                     <label for="mail"></label>
@@ -104,7 +110,7 @@
                     <input type="submit" value=SUSCRIBIRME class=botonmail>
                 </form>
             </div>
-            <div class="redes col-sm m-4 m-lg-4">
+            <div class="redes col col-md-5 offset-md-2">
                 <h2>Seguinos en nuestras redes sociales</h2>
                 <div>
                     <a href="http://www.facebook.com/mfcosmeticanatural"><img src="./img/facebook.png" alt="Facebook" class="iconoredes"></a>

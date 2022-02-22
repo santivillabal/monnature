@@ -14,13 +14,16 @@ h1{
     padding: 5rem;
     color: #dc5de4;
     text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 3rem;
-    text-shadow: 0.1rem 0.1rem 0.1rem #441947;
+    font-family: 'Rubik';
+    font-size: 4rem;
+}
+p{
+  font-family: 'Rubik';
 }
 a:link, a:visited, a:active, a:hover {
   text-decoration:none;
-  font-family: sans-serif;
+  font-family: 'Rubik';
+  font-weight: normal;
 }
 a:link{
   color:black;
@@ -30,14 +33,6 @@ a:visited{
 }
 a:hover{
   color:#dc5de4;
-}
-.img-carrusel{
-  height: 300px;
-  object-fit: cover;
-}
-.texto-carrusel{
-  bottom: 37.5%;
-  color: #000000;
 }
 header{
   display: grid;
@@ -73,17 +68,20 @@ header div{
 .me-auto {
   margin-left: auto;
 }
-.inicio{
-  display: grid;
-  grid-template-rows: 2fr, 1fr;
-  grid-row-gap: 3rem;
+.img-carrusel{
+  height: 300px;
+  object-fit: cover;
+}
+.texto-carrusel{
+  bottom: 37.5%;
+  color: #000000;
 }
 .texto-carrusel a{
   background-color: #dc5de4;
   border-radius:1.5rem;
   width: fit-content;
   color:white;    
-  font-weight: bold;
+  font-weight: normal;
   padding: 2%;
   text-align: center;
   align-self: center;
@@ -95,49 +93,37 @@ header div{
 }
 .texto-carrusel h2{
   margin-bottom: 2%;
-  font-family: sans-serif;
+  font-family: 'Rubik';
   text-align: center;
 }
 .destacado{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0.5fr 2fr;
-  grid-template-areas: "titulo titulo titulo titulo" "producto1 producto2 producto3 producto4";
-  grid-gap: 1rem;
   width: auto;
   justify-items: center;
   align-items: center;
+  margin-top: 3rem;
 }
 .destacado h2{
   grid-area: titulo;
   text-align: center;
   font-size: 2rem;
-  font-family: sans-serif;
+  font-family: 'Rubik';
   color: #dc5de4;
+  margin-bottom: 5rem;
 }
 .destacado div img{
-  width: 20rem;
+  width: 10rem;
+  margin-bottom: 3rem;
 }
-#producto1{
-  grid-area: producto1;
-}
-#producto2{
-  grid-area: producto2;
-}
-#producto3{
-  grid-area: producto3;
-}
-#producto4{
-  grid-area: producto4;
-}
-.destacado div{
+.prod{
   text-align: center;
   font-weight: bold;
   font-size: large;
   padding-bottom: 5rem;
+}
+.prod img{
   transition: transform, 1s;
 }
-.destacado div:hover{
+.prod img:hover{
   transform: scale(1.25);
 }
 .footer{
@@ -148,14 +134,14 @@ header div{
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: start;
 }
 .redes div{
   display: flex;
   flex-direction: row;
 }
 .redes h2{
-  font-family: sans-serif;
+  font-family: 'Rubik';
   text-align: right;
   font-weight: lighter;
   color: #f9b80a;
@@ -166,7 +152,7 @@ header div{
   margin: 0.5rem;
 }
   .cajamail h2{
-    font-family: sans-serif;
+    font-family: 'Rubik';
     font-weight: lighter;
     color: #f9b80a;
     margin-bottom: 1rem;
@@ -176,110 +162,41 @@ header div{
   }
   .botonmail {
     padding: 1%;
-    font-family: sans-serif;
-    font-weight: bold;
+    font-family: 'Rubik';
+    font-weight: normal;
     letter-spacing: 1px;
     background-color: #dc5de4;
     border-style: none;
     color: white;
     border-radius: 60px;
+    margin-top: 0.5rem;
   }
   .botonmail:hover{
     background-color: #dc5de4;
     color: #000000;
   }
-  .acercade{
-    display: grid;
-    grid-template-rows: 0.25fr, 1fr, 2fr;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: "titulo titulo" "foto texto" "productos productos";
-    grid-gap: 1rem;
-    width: auto;
-    margin-bottom: 5rem;
-  }
-  .acercade h1{
-    grid-area: titulo;
-    text-align: center;
-  }
-  .acercade img{
-    grid-area: foto;
-    width: 20rem;
-  }
-  .acercade p{
-    grid-area: texto;
-    text-align: left;
-    padding-right: 5rem;
-    font-size: large;
-    line-height: 2rem;
-  }
-  #fotoproductos{
-    grid-area: productos;
-    width: auto;
-  }
+.cosmetologa{
+  width: 25rem;
+  padding-bottom: 3rem;
+}
 .catalogo{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 0.25fr, 1fr, 1fr, 1fr;
-  grid-template-areas: "titulo titulo titulo titulo" "prod1 prod2 prod3 prod4" "prod5 prod6 prod7 prod8" "prod9 prod10 prod11 prod12";
-  grid-column-gap: 1rem;
   grid-row-gap: 4rem;
   justify-content: space-evenly;
   justify-items: center;
   align-items: center;
   width: auto;
   margin-bottom: 5rem;
+  font-family: 'Rubik';
   text-align: center;
   font-weight: bold;
 }
-.catalogo h1{
-  grid-area: titulo;
-}
-.catalogo div{
+.fotocat{
+  width: 10rem;
+  margin-bottom: 3rem;
   transition: transform, 1s;
 }
-.catalogo div:hover{
+.fotocat:hover{
   transform: scale(1.25);
-}
-#prod1{
-  grid-area: prod1;
-}
-#prod2{
-  grid-area: prod2;
-}
-#prod3{
-  grid-area: prod3;
-}
-#prod4{
-  grid-area: prod4;
-}
-#prod5{
-  grid-area: prod5;
-}
-#prod6{
-  grid-area: prod6;
-}
-#prod7{
-  grid-area: prod7;
-}
-#prod8{
-  grid-area: prod8;
-}
-#prod9{
-  grid-area: prod9;
-}
-#prod10{
-  grid-area: prod10;
-}
-#prod11{
-  grid-area: prod11;
-}
-#prod12{
-  grid-area: prod12;
-}
-.fotocat{
-  width: 20rem;
 }
 .contacto{
   display: grid;
@@ -291,26 +208,26 @@ header div{
   width: auto;
   font-weight: bold;
   background: rgb(220,93,228);
-background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47%, rgba(220,93,228,1) 100%);
+  background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47%, rgba(220,93,228,1) 100%);
   padding-bottom: 10rem;
 }
 .contacto h1{
   color: white;
 }
 .contacto form{
-  font-family: sans-serif;
-  font-weight: lighter;
+  font-family: 'Rubik';
+  font-weight: normal;
   align-items: right;
   line-height: 2rem;
-  font-size: large;
+  font-size: x-large;
 }
 .contacto input{
   margin-bottom: 1.5rem;
 }
 .botcontacto {
   padding: 3%;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: 'Rubik';
+  font-weight: normal;
   letter-spacing: 1px;
   background-color: #dc5de4;
   border-style: none;
@@ -322,51 +239,41 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
   color: black;
 }
 .grillaproducto{
-  display: grid;
-  grid-template-rows: 0.5fr, 2fr;
-  grid-template-columns: 1fr, 2fr;
-  grid-gap: 1rem;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-items: center;
-  width: auto;
-  grid-template-areas: "foto titulo" "foto texto";
-  margin: 4rem;
+  margin-top: 3rem;
+}
+.grillaproducto p{
+  font-family: 'Rubik';
 }
 .grillaproducto img{
-  grid-area: foto;
-  width: 30rem;
+  width: 20rem;
 }
 .grillaproducto h2{
-  grid-area: titulo;
   text-align: left;
   justify-self: left;
   font-size: 3rem;
-  font-family: sans-serif;
+  font-family: 'Rubik';
   color: #dc5de4;
-}
-.grillaproducto div{
-  grid-area: texto;
-  text-align: left;
-  padding-right: 5rem;
-  font-size: large;
-  line-height: 1rem;
-  align-self: start;
+  margin-bottom: 2rem;
 }
 .grillaproducto button{
   padding: 0.5rem;
-  font-family: sans-serif;
-  font-weight: bold;
+  font-family: 'Rubik';
+  font-weight: normal;
   letter-spacing: 1px;
   background-color: #dc5de4;
   border-style: none;
   color: white;
   border-radius: 60px;
+  margin-top: 2rem;
 }
 .grillaproducto button:hover{
   background-color: #dc5de4;
   color: #000000;
 }
+
+
+
+
 
   /*-----MEDIA QUERIES-----*/
 
@@ -380,25 +287,18 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
   .banner a{
     padding: 0.8rem;
   }
-  .destacado{
-    grid-template-columns: 384px 384px;
-    grid-template-rows: 0.5fr 1fr 1fr;
-    grid-template-areas: "titulo titulo" "producto1 producto2" "producto3 producto4";
-    grid-gap: 0rem;
-    margin-bottom:3rem
-  }
   .destacado h2{
     font-size: 2.5rem;
     padding-bottom: 2rem;
   }
-  .destacado div{
+  .prod{
     padding-bottom: 2rem;
   }
   .destacado div img{
-    width: 15rem;
+    width: 10rem;
   }
   .redes h2{
-    padding-bottom: 1rem;
+    padding-bottom: 0rem;
   }
   .iconoredes{
     display: inline;
@@ -406,46 +306,33 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
     width: 2rem;
     align-self: end;
   }
+  .cajamail{
+    margin-bottom: 1.5rem;
+  }
     .cajamail h2{
-      padding-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
     .botonmail {
       padding: 0.3rem;
     }
-    .acercade img{
-      margin-top: 0rem;
-    }
-    .acercade p{
-      padding-right: 2rem;
-      line-height: 1.8rem;
-    }
-    .catalogo{
-      display: grid;
-      grid-template-columns: repeat(3, 256px);
-      grid-template-rows: 0.25fr, 1fr, 1fr, 1fr, 1fr;
-      grid-row-gap: 3rem;
-      grid-template-areas: "titulo titulo titulo" "prod1 prod2 prod3" "prod4 prod5 prod6" "prod7 prod8 prod9" "prod10 prod11 prod12";
+    .cosmetologa{
+      width: 20rem;
     }
     .catalogo h1{
       padding: 3rem;
     }
     .fotocat{
-      width: 15rem;
+      width: 5rem;
+      margin-bottom: 2rem;
     }
     .grillaproducto{
-      margin: 3rem;
-      margin-top: 5rem;
-      margin-bottom: 5rem;
+      margin-bottom: 3rem;
     }
     .grillaproducto img{
-      grid-area: foto;
-      width: 20rem;
+      width: 15rem;
     }
     .grillaproducto h2{
       font-size: 2rem;
-    }
-    .grillaproducto div{
-      padding-right: 0rem;
     }
 }
 @media screen and (max-width: 425px) {
@@ -458,24 +345,6 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
-  }
-  .menu{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    background-color: #f9be20;
-    font-weight: bold;
-    list-style: none;
-  }
-  .menu li{
-    text-align: center;
-    padding: 0.5rem;
-  }
-  .inicio{
-    display: grid;
-    grid-template-rows: 2fr, 1fr;
-    grid-row-gap: 1rem;
   }
   .banner{
     background-image: url(../img/fondoBanner.png);
@@ -490,7 +359,6 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
   }
   .banner h2{
     margin-bottom: 2rem;
-    font-family: sans-serif;
     font-size: 1.5rem;
     text-align: center;
   }
@@ -507,43 +375,21 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
   .banner a:hover{
     color: #000000;
   }
-  .destacado{
-    display: grid;
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 0.5fr 1fr 1fr;
-    grid-template-areas: "titulo titulo" "producto1 producto2" "producto3 producto4";
-    grid-gap: 0.5rem;
-    width: auto;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-  }
   .destacado h2{
     grid-area: titulo;
     text-align: center;
     font-size: 1.5rem;
-    font-family: sans-serif;
     color: #dc5de4;
     padding: 1rem;
+  }
+  .prod{
+    padding-bottom: 1rem;
   }
   .destacado div img{
     width: 5rem;
   }
   .destacado a{
     font-size: small;
-  }
-  .destacado div{
-    text-align: center;
-    font-weight: bold;
-    font-size: large;
-    padding-bottom: 1rem;
-  }
-  .footer{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color: black;
-    padding: 1.5rem;
-    font-size: smaller;
   }
   .redes{
     display: flex;
@@ -552,7 +398,6 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
     justify-content: start;
   }
   .redes h2{
-    font-family: sans-serif;
     text-align: right;
     font-weight: lighter;
     color: #f9b80a;
@@ -560,102 +405,46 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
   .redes div{
     display: flex;
     flex-direction: row;
-    padding-top: 1rem;
+    padding-top: 0rem;
   }
   .iconoredes{
     width: 2rem;
     align-self: end;
     margin-left: 1rem;
   }
-    .cajamail h2{
-      font-family: sans-serif;
+  .cajamail h2{
       font-weight: lighter;
-      color: #f9b80a;
-      padding-bottom: 1rem;
-    }
-    .email{
-      margin-bottom: 1rem;
-    }
-    .acercade{
-    display: grid;
-    grid-template-rows: 0.25fr, 1fr, 2fr, 2fr;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    align-items: center;
-    grid-template-areas: "titulo titulo" "foto foto" "texto texto" "productos productos";
-    grid-gap: 1rem;
-    width: auto;
-    margin-bottom: 2rem;
+      margin-bottom: 0.5rem;
   }
-  .acercade h1{
-    grid-area: titulo;
-    text-align: center;
-    padding: 1rem;
-    padding-top: 3rem;
+  .email{
+      margin-bottom: 0rem;
   }
-  .acercade img{
-    grid-area: foto;
-    width: 15rem;
-  }
-  .acercade p{
-    grid-area: texto;
-    text-align: left;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    font-size: large;
-    line-height: 1.5rem;
+  .cosmetologa{
+    padding-bottom: 3rem;
   }
   #fotoproductos{
     grid-area: productos;
     width: 425px;
   }
-    .catalogo{
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: 0.25fr, 1fr, 1fr, 1fr;
-      grid-template-areas: "titulo titulo" "prod1 prod2" "prod3 prod4" "prod5 prod6" "prod7 prod8" "prod9 prod10" "prod11 prod12";
-      grid-column-gap: 1rem;
-      grid-row-gap: 1rem;
+  .catalogo{
       justify-content: space-evenly;
       justify-items: center;
       align-items: center;
       width: auto;
       margin-bottom: 3rem;
       text-align: center;
-    }
-    .catalogo h1{
-      grid-area: titulo;
+  }
+  .catalogo h1{
       font-size: 2rem;
       padding-top: 3rem;
       padding-bottom: 3rem;
       padding-left: 0rem;
       padding-right: 0rem;
-    }
-    .fotocat{
+  }
+  .fotocat{
       width: 5rem;
-    }
-  .contacto{
-  display: grid;
-  grid-template-rows: 0.5fr, 2fr;
-  grid-gap: 1rem;
-  justify-content: space-evenly;
-  justify-items: center;
-  align-items: center;
-  width: auto;
-  font-weight: bold;
-  background-image: url(../img/fondoContacto.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 1rem;
-  padding-bottom: 5rem;
-}
-.contacto h1{
-  font-size: 2rem;
-  padding: 0rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}  
-.grillaproducto{
+  }
+  .grillaproducto{
   display: grid;
   grid-template-rows: 0.5fr, 2fr;
   grid-template-columns: 1fr, 2fr, 2fr;
@@ -668,20 +457,17 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
   margin: 2rem;
   margin-top: 3rem;
   margin-bottom: 3rem;
-}
-.grillaproducto img{
+  }
+  .grillaproducto img{
   grid-area: foto;
-  width: 15rem;
-}
-.grillaproducto h2{
-  grid-area: titulo;
+  width: 10rem;
+  }
+  .grillaproducto h2{
   text-align: center;
   justify-self: center;
   font-size: 2rem;
-  font-family: sans-serif;
-  color: #dc5de4;
-}
-.grillaproducto div{
+  }
+  .grillaproducto div{
   grid-area: texto;
   text-align: left;
   padding-right: 1rem;
@@ -689,5 +475,5 @@ background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47
   font-size: large;
   line-height: 1.5rem;
   align-self: center;
-}
+  }
 }
