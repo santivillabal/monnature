@@ -6,10 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Producto</title>
 </head>
 <body>
@@ -44,16 +41,16 @@
     <main>
         <div class="container grillaproducto">
           <div class="row">
-            <div class="col col-md-6">
+            <div class="col-sm-12 col-md-6">
               <img src="../img/fotoProducto4.png" alt="Foto de producto">
             </div>
-            <div class="col col-md-6">
+            <div class="col-sm-12 col-md-6">
                 <h2>Crema calmante</h2>
-                <p>Para dolores musculares, artritis, artrosis.</p>
-                <p>Componentes: aceites vegetales, extracto de árnica, extracto de caléndula, extracto de hammamelis, aceites esenciales (enebro, clavo, romero, alcanfor, lavanda, caléndula).</p>
-                <p>Modo de uso: aplicar de una a tres veces al día en la zona adolorida. No usar en piel irritada o con heridas.</p>
-                <p>Presentación de 50 g.</p>
-                <p>Vida útil: 12 meses.</p>
+                <p class="grillaproducto__texto">Para dolores musculares, artritis, artrosis.</p>
+                <p class="grillaproducto__texto">Componentes: aceites vegetales, extracto de árnica, extracto de caléndula, extracto de hammamelis, aceites esenciales (enebro, clavo, romero, alcanfor, lavanda, caléndula).</p>
+                <p class="grillaproducto__texto">Modo de uso: aplicar de una a tres veces al día en la zona adolorida. No usar en piel irritada o con heridas.</p>
+                <p class="grillaproducto__texto">Presentación de 50 g.</p>
+                <p class="grillaproducto__texto">Vida útil: 12 meses.</p>
                 <button>COMPRAR</button>
             </div>
           </div>
@@ -61,17 +58,17 @@
     </main>
     <footer class="footer container-fluid">
       <div class="row">
-          <div class="cajamail col col-md-4">
+          <div class="footer__mail col col-md-5">
               <h2>Recibí nuestras novedades en tu correo electrónico</h2>
               <form>
                   <label for="mail"></label>
-                  <input type="email" id="mail" placeholder="ana@ejemplo.com" required class="email">
-                  <input type="submit" value=SUSCRIBIRME class=botonmail>
+                  <input type="email" id="mail" placeholder="ana@ejemplo.com" required class="footer__mail__input">
+                  <input type="submit" value=SUSCRIBIRME class="footer__mail__boton">
               </form>
           </div>
-          <div class="redes col col-md-4 offset-md-4">
+          <div class="footer__redes col col-md-5 offset-md-2">
               <h2>Seguinos en nuestras redes sociales</h2>
-              <div>
+              <div class="footer__redes__icon">
                   <a href="http://www.facebook.com/mfcosmeticanatural"><img src="../img/facebook.png" alt="Facebook" class="iconoredes"></a>
                   <a href="http://www.instagram.com/monnature"><img src="../img/instagram.png" alt="Instagram" class="iconoredes"></a>
               </div>

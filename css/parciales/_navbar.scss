@@ -1,0 +1,20 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    font-weight: bolder;
+    list-style: none;
+    padding: 0rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .navbar li{
+    padding: 0.5rem;
+  }
+  .nav-link a:hover{
+      color:$lila;
+  }
+  .me-auto {
+    margin-left: auto;
+  }

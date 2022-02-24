@@ -6,10 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/main.css">
     <title>Acerca de</title>
 </head>
 <body>
@@ -42,27 +39,27 @@
         </nav>
     </header>
     <main>
-        <div class="container m-md-6 mb-5">
+        <div class="container m-md-6 mb-5 acercade">
             <h1>Acerca de</h1>
-            <div class="row">    
-                <img src="../img/cosmetóloga.png" alt="foto de la cosmetóloga" class="col col-md-6 cosmetologa">
+            <div class="row">
+                <img src="../img/cosmetóloga.png" alt="foto de la cosmetóloga" class="col col-md-6 acercade__cosmetologa">
                 <p style="text-align: justify;" class="col col-md-6">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In non lacus leo. Vestibulum eget accumsan ante. Ut semper enim et nisi consequat, quis fringilla urna sagittis. Donec semper justo vitae est laoreet congue. Nullam vehicula sagittis urna, nec scelerisque lectus porttitor eu. Mauris in eros orci. Aenean porttitor purus nec est faucibus, sit amet condimentum eros faucibus. Phasellus scelerisque ex vestibulum, eleifend risus vel, volutpat velit. Donec vel sem metus. Vestibulum vel vehicula velit. Aliquam lobortis ex at erat lacinia, non lacinia eros lacinia. Morbi mauris nunc, eleifend eu cursus sit amet, sollicitudin sit amet nibh.</p>
             </div>
         </div>
     </main>
     <footer class="footer container-fluid">
       <div class="row">
-          <div class="cajamail col col-md-4">
+          <div class="footer__mail col col-md-5">
               <h2>Recibí nuestras novedades en tu correo electrónico</h2>
               <form>
                   <label for="mail"></label>
-                  <input type="email" id="mail" placeholder="ana@ejemplo.com" required class="email">
-                  <input type="submit" value=SUSCRIBIRME class=botonmail>
+                  <input type="email" id="mail" placeholder="ana@ejemplo.com" required class="footer__mail__input">
+                  <input type="submit" value=SUSCRIBIRME class="footer__mail__boton">
               </form>
           </div>
-          <div class="redes col col-md-4 offset-md-4">
+          <div class="footer__redes col col-md-5 offset-md-2">
               <h2>Seguinos en nuestras redes sociales</h2>
-              <div>
+              <div class="footer__redes__icon">
                   <a href="http://www.facebook.com/mfcosmeticanatural"><img src="../img/facebook.png" alt="Facebook" class="iconoredes"></a>
                   <a href="http://www.instagram.com/monnature"><img src="../img/instagram.png" alt="Instagram" class="iconoredes"></a>
               </div>

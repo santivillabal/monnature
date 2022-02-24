@@ -1,0 +1,50 @@
+.footer{
+    background-color: $negro;
+    padding: 2rem;
+    &__redes{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: start;
+        }
+        & h2{
+            font-family: 'Rubik';
+            text-align: right;
+            font-weight: lighter;
+            color: $amarillo;
+            }
+    &__redes__icon{
+        display: flex;
+        flex-direction: row;
+        }
+            & img{
+            width: 2rem;
+            align-self: end;
+            margin: 0.5rem;
+            }
+    &__mail h2{
+      text-align: left;
+      font-family: 'Rubik';
+      font-weight: lighter;
+      color: $amarillo;
+      margin-bottom: 1rem;
+      }
+        &__input{
+            padding: 1%;
+            }
+.footer__mail__boton{
+            padding: 1%;
+            font-family: 'Rubik';
+            font-weight: normal;
+            letter-spacing: 1px;
+            background-color: #dc5de4;
+            border-style: none;
+            color: $blanco;
+            border-radius: 60px;
+            margin-top: 0.5rem;
+            }
+.footer__mail__boton:hover{
+            background-color: $lila;
+            color: $negro;
+            }
+}

@@ -1,0 +1,27 @@
+.destacado{
+    width: auto;
+    justify-items: center;
+    align-items: center;
+    margin-top: 3rem;
+    & h2{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: 'Rubik';
+    color: $lila;
+    margin-bottom: 5rem;
+    }
+    &__prod{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    padding-bottom: 5rem;
+    }
+    &__prod img{
+    width: 10rem;
+    margin-bottom: 3rem;
+    transition: transform, 1s;
+    }
+    &__prod img:hover{
+    transform: scale(1.25);
+    }
+}

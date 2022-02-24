@@ -1,0 +1,142 @@
+@media screen and (max-width: 768px) {
+  h1{
+    font-size: 3rem;
+  }
+    .destacado__prod{
+      padding-bottom: 2rem;
+    }
+    .footer__redes h2{
+      padding-bottom: 0rem;
+      &__icon img{
+        margin-left: 1rem;
+        }
+    }
+    .acercade p{
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+      }
+    .acercade__cosmetologa{
+        width: 20rem;
+      }
+    .footer__mail{
+      margin-bottom: 1.5rem;
+      & h2{
+          margin-bottom: 0.5rem;
+          }
+      &__boton{
+          padding: 0.3rem;
+          }
+    }
+    .catalogo h1{
+      padding: 3rem;
+      }
+    .catalogo__img{
+      width: 5rem;
+      margin-bottom: 2rem;
+    }
+    .grillaproducto{
+      margin-bottom: 3rem;
+      & img{
+        width: 15rem;
+        }
+      & h2{
+        font-size: 2rem;
+        }
+    .grillaproducto__texto{
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+      }  
+    }
+}
+  @media screen and (max-width: 425px) {
+    h1{
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      font-size: 2rem;
+    }
+    header a img{
+      max-width: 100%;
+      padding-left: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 1rem;
+    }
+    .destacado{
+      margin-bottom: 3rem;
+      & h2{
+        text-align: center;
+        font-size: 1.5rem;
+        }
+      & a{
+        font-size: small;
+        }
+      &__prod{
+        padding-bottom: 1rem;
+        & img{
+          width: 5rem;
+         }
+      }
+    }
+    .footer__redes__icon{
+      padding-top: 0rem;
+      & img{
+        margin-left: 1rem;
+        }
+    }
+    .footer__mail h2{
+        margin-bottom: 0.5rem;
+    }
+    .footer__mail__input{
+        margin-bottom: 0rem;
+    }
+    .acercade p{
+      padding-left: 2rem;
+      padding-right: 2rem;
+      font-size: 0.8rem;
+      line-height: 1.5rem;
+    }
+    .acercade__cosmetologa{
+      width: 18rem;
+      padding-left: 5rem;
+      padding-right: 5rem;
+      padding-bottom: 3rem;
+    }
+    .acercade h1{
+    font-size: 2.5rem;
+    }
+
+    .catalogo{
+        margin-bottom: 3rem;
+        & h1{
+            font-size: 2rem;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            padding-left: 0rem;
+            padding-right: 0rem;
+            }
+        &__img{
+            width: 5rem;
+            }
+    }
+    .grillaproducto{
+        margin-bottom: 3rem;
+        & img{
+            width: 10rem;
+            }
+        & h2{
+            text-align: left;
+            justify-self: center;
+            font-size: 2rem;
+            margin-left: 2rem;
+            }
+        & button{
+          margin-top: 0.5rem;
+          margin-left: 2rem;
+          }
+      .grillaproducto__texto{
+          font-size: 0.8rem;
+          line-height: 1.5rem;
+          margin-left: 2rem;
+          margin-right: 2rem;
+          }        
+  }
+}  

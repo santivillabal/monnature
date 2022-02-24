@@ -1,0 +1,14 @@
+header{
+    display: grid;
+    grid-template-rows: 2fr, 1fr;
+    justify-content: center;
+  }
+  header a img{
+    max-width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 2rem;
+  }
+  header div{
+    background-color: $amarillo;
+  }

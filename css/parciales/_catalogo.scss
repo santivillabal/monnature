@@ -1,0 +1,19 @@
+.catalogo{
+    grid-row-gap: 4rem;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    width: auto;
+    margin-bottom: 5rem;
+    font-family: 'Rubik';
+    text-align: center;
+    font-weight: bold;
+    &__img{
+      width: 10rem;
+      margin-bottom: 3rem;
+      transition: transform, 1s;
+      }
+    &__img:hover{
+      transform: scale(1.25);
+      }
+  }

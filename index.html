@@ -6,10 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Monnature cosmética natural</title>
 </head>
 <body>
@@ -42,7 +39,7 @@
         </nav>
     </header>
     <main>
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleCaptions" class="carousel slide carrusel" data-bs-ride="carousel">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
               <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -50,17 +47,17 @@
             </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="./img/fondoBanner.png" class="d-block w-100 img-carrusel" alt="...">
-                <div class="carousel-caption d-block d-md-block texto-carrusel">
+                <img src="./img/fondoBanner.png" class="d-block w-100 carrusel__img" alt="...">
+                <div class="carousel-caption d-block d-md-block carrusel__texto">
                   <h2>Conocé nuestros productos</h2>
                   <a href="./pages/catalogo.html">VER CATÁLOGO</a>
                 </div>
               </div>
               <div class="carousel-item">
-                <img src="./img/productos.png" class="d-block w-100 img-carrusel" alt="...">
+                <img src="./img/productos.png" class="d-block w-100 carrusel__img" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="./img/productos2.jpg" class="d-block w-100 img-carrusel" alt="...">
+                <img src="./img/productos2.jpg" class="d-block w-100 carrusel__img" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
@@ -76,24 +73,24 @@
           <h2>Productos destacados</h2>
             <div class="container">
               <div class="row">
-                <div class="col-6 col-md-3 prod">
+                <div class="col-6 col-md-3 destacado__prod">
                     <a href="./pages/producto.html"><img src="img/fotoProducto2.png" alt="foto de producto"></a>
-                    <a href="./pages/producto.html" class="titproducto">Desodorante en crema</a>
+                    <a href="./pages/producto.html">Desodorante en crema</a>
                     <p>$1250</p>
                 </div>
-                <div class="col-6 col-md-3 prod">
+                <div class="col-6 col-md-3 destacado__prod">
                    <a href="./pages/producto.html"><img src="./img/fotoProducto1.png" alt="foto de producto"></a>
-                   <a href="./pages/producto.html" class="titproducto">Desmaquillante facial</a>
+                   <a href="./pages/producto.html">Desmaquillante facial</a>
                    <p>$1250</p>
                 </div>
-                <div class="col-6 col-md-3 prod">
+                <div class="col-6 col-md-3 destacado__prod">
                     <a href="./pages/producto.html"><img src="./img/fotoProducto4.png" alt="foto de producto"></a>
-                   <a href="./pages/producto.html" class="titproducto">Crema calmante</a>
+                   <a href="./pages/producto.html">Crema calmante</a>
                    <p>$1250</p>
                 </div>
-                <div class="col-6 col-md-3 prod">
+                <div class="col-6 col-md-3 destacado__prod">
                     <a href="./pages/producto.html"><img src="./img/fotoProducto3.png" alt="foto de producto"></a>
-                   <a href="./pages/producto.html" class="titproducto">Crema para manos</a>
+                   <a href="./pages/producto.html">Crema para manos</a>
                    <p>$1250</p>
                 </div>
               </div>  
@@ -102,17 +99,17 @@
     </main>
     <footer class="footer container-fluid">
         <div class="row">
-            <div class="cajamail col col-md-5">
+            <div class="footer__mail col col-md-5">
                 <h2>Recibí nuestras novedades en tu correo electrónico</h2>
                 <form>
                     <label for="mail"></label>
-                    <input type="email" id="mail" placeholder="ana@ejemplo.com" required class="email">
-                    <input type="submit" value=SUSCRIBIRME class=botonmail>
+                    <input type="email" id="mail" placeholder="ana@ejemplo.com" required class="footer__mail__input">
+                    <input type="submit" value=SUSCRIBIRME class="footer__mail__boton">
                 </form>
             </div>
-            <div class="redes col col-md-5 offset-md-2">
+            <div class="footer__redes col col-md-5 offset-md-2">
                 <h2>Seguinos en nuestras redes sociales</h2>
-                <div>
+                <div class="footer__redes__icon">
                     <a href="http://www.facebook.com/mfcosmeticanatural"><img src="./img/facebook.png" alt="Facebook" class="iconoredes"></a>
                     <a href="http://www.instagram.com/monnature"><img src="./img/instagram.png" alt="Instagram" class="iconoredes"></a>
                 </div>

@@ -1,0 +1,524 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap");
+* {
+  margin: 0%;
+  padding: 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  color: #dc5de4;
+  text-align: center;
+  font-family: 'Rubik';
+  font-size: 4rem;
+}
+
+a:link, a:visited, a:active, a:hover {
+  text-decoration: none;
+  font-family: 'Rubik';
+  font-weight: normal;
+}
+
+a:link {
+  color: #000000;
+}
+
+a:visited {
+  color: #000000;
+}
+
+a:hover {
+  color: #dc5de4;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr, 1fr;
+      grid-template-rows: 2fr, 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header a img {
+  max-width: 100%;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  padding-bottom: 2rem;
+}
+
+header div {
+  background-color: #f9b80a;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-weight: bolder;
+  list-style: none;
+  padding: 0rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.navbar li {
+  padding: 0.5rem;
+}
+
+.nav-link a:hover {
+  color: #dc5de4;
+}
+
+.me-auto {
+  margin-left: auto;
+}
+
+.carrusel__img {
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carrusel__texto {
+  bottom: 37.5%;
+  color: #000000;
+}
+
+.carrusel__texto a {
+  background-color: #dc5de4;
+  border-radius: 1.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  color: #ffffff;
+  font-weight: normal;
+  padding: 2%;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: 1s, -webkit-transform;
+  transition: 1s, -webkit-transform;
+  transition: transform, 1s;
+  transition: transform, 1s, -webkit-transform;
+}
+
+.carrusel__texto a:hover {
+  color: #000000;
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.carrusel__texto h2 {
+  margin-bottom: 2%;
+  font-family: 'Rubik';
+  text-align: center;
+}
+
+.destacado {
+  width: auto;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+
+.destacado h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Rubik';
+  color: #dc5de4;
+  margin-bottom: 5rem;
+}
+
+.destacado__prod {
+  text-align: center;
+  font-weight: bold;
+  font-size: large;
+  padding-bottom: 5rem;
+}
+
+.destacado__prod img {
+  width: 10rem;
+  margin-bottom: 3rem;
+  -webkit-transition: 1s, -webkit-transform;
+  transition: 1s, -webkit-transform;
+  transition: transform, 1s;
+  transition: transform, 1s, -webkit-transform;
+}
+
+.destacado__prod img:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.footer {
+  background-color: #000000;
+  padding: 2rem;
+}
+
+.footer__redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.footer h2 {
+  font-family: 'Rubik';
+  text-align: right;
+  font-weight: lighter;
+  color: #f9b80a;
+}
+
+.footer__redes__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer img {
+  width: 2rem;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin: 0.5rem;
+}
+
+.footer__mail h2 {
+  text-align: left;
+  font-family: 'Rubik';
+  font-weight: lighter;
+  color: #f9b80a;
+  margin-bottom: 1rem;
+}
+
+.footer__input {
+  padding: 1%;
+}
+
+.footer .footer__mail__boton {
+  padding: 1%;
+  font-family: 'Rubik';
+  font-weight: normal;
+  letter-spacing: 1px;
+  background-color: #dc5de4;
+  border-style: none;
+  color: #ffffff;
+  border-radius: 60px;
+  margin-top: 0.5rem;
+}
+
+.footer .footer__mail__boton:hover {
+  background-color: #dc5de4;
+  color: #000000;
+}
+
+.acercade p {
+  font: normal 1rem/2rem Rubik;
+}
+
+.acercade__cosmetologa {
+  width: 25rem;
+  padding-bottom: 3rem;
+}
+
+.catalogo {
+  grid-row-gap: 4rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  margin-bottom: 5rem;
+  font-family: 'Rubik';
+  text-align: center;
+  font-weight: bold;
+}
+
+.catalogo__img {
+  width: 10rem;
+  margin-bottom: 3rem;
+  -webkit-transition: 1s, -webkit-transform;
+  transition: 1s, -webkit-transform;
+  transition: transform, 1s;
+  transition: transform, 1s, -webkit-transform;
+}
+
+.catalogo__img:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.contacto {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.5fr, 2fr;
+      grid-template-rows: 0.5fr, 2fr;
+  grid-gap: 1rem;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  font-weight: bold;
+  background: #dc5de4;
+  background: linear-gradient(310deg, #dc5de4 0%, #f9b80a 47%, #dc5de4 100%);
+  padding-bottom: 10rem;
+}
+
+.contacto h1 {
+  color: #ffffff;
+}
+
+.contacto form {
+  font-family: 'Rubik';
+  font-weight: normal;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  line-height: 2rem;
+  font-size: x-large;
+}
+
+.contacto input {
+  margin-bottom: 1.5rem;
+}
+
+.contacto__boton {
+  padding: 3%;
+  font-family: 'Rubik';
+  font-weight: normal;
+  letter-spacing: 1px;
+  background-color: #dc5de4;
+  border-style: none;
+  color: #ffffff;
+  border-radius: 60px;
+}
+
+.contacto__boton:hover {
+  background-color: #dc5de4;
+  color: #000000;
+}
+
+.grillaproducto {
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.grillaproducto img {
+  width: 20rem;
+}
+
+.grillaproducto h2 {
+  text-align: left;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  font-size: 3rem;
+  font-family: 'Rubik';
+  color: #dc5de4;
+  margin-bottom: 2rem;
+}
+
+.grillaproducto button {
+  padding: 0.5rem;
+  font-family: 'Rubik';
+  font-weight: normal;
+  letter-spacing: 1px;
+  background-color: #dc5de4;
+  border-style: none;
+  color: #ffffff;
+  border-radius: 60px;
+  margin-top: 2rem;
+}
+
+.grillaproducto button:hover {
+  background-color: #dc5de4;
+  color: #000000;
+}
+
+.grillaproducto .grillaproducto__texto {
+  font: normal 1rem/2rem Rubik;
+}
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .destacado__prod {
+    padding-bottom: 2rem;
+  }
+  .footer__redes h2 {
+    padding-bottom: 0rem;
+  }
+  .footer__redes h2__icon img {
+    margin-left: 1rem;
+  }
+  .acercade p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  .acercade__cosmetologa {
+    width: 20rem;
+  }
+  .footer__mail {
+    margin-bottom: 1.5rem;
+  }
+  .footer__mail h2 {
+    margin-bottom: 0.5rem;
+  }
+  .footer__mail__boton {
+    padding: 0.3rem;
+  }
+  .catalogo h1 {
+    padding: 3rem;
+  }
+  .catalogo__img {
+    width: 5rem;
+    margin-bottom: 2rem;
+  }
+  .grillaproducto {
+    margin-bottom: 3rem;
+  }
+  .grillaproducto img {
+    width: 15rem;
+  }
+  .grillaproducto h2 {
+    font-size: 2rem;
+  }
+  .grillaproducto .grillaproducto__texto {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  h1 {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+  }
+  header a img {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+  }
+  .destacado {
+    margin-bottom: 3rem;
+  }
+  .destacado h2 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .destacado a {
+    font-size: small;
+  }
+  .destacado__prod {
+    padding-bottom: 1rem;
+  }
+  .destacado__prod img {
+    width: 5rem;
+  }
+  .footer__redes__icon {
+    padding-top: 0rem;
+  }
+  .footer__redes__icon img {
+    margin-left: 1rem;
+  }
+  .footer__mail h2 {
+    margin-bottom: 0.5rem;
+  }
+  .footer__mail__input {
+    margin-bottom: 0rem;
+  }
+  .acercade p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  .acercade__cosmetologa {
+    width: 18rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-bottom: 3rem;
+  }
+  .acercade h1 {
+    font-size: 2.5rem;
+  }
+  .catalogo {
+    margin-bottom: 3rem;
+  }
+  .catalogo h1 {
+    font-size: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+  .catalogo__img {
+    width: 5rem;
+  }
+  .grillaproducto {
+    margin-bottom: 3rem;
+  }
+  .grillaproducto img {
+    width: 10rem;
+  }
+  .grillaproducto h2 {
+    text-align: left;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    font-size: 2rem;
+    margin-left: 2rem;
+  }
+  .grillaproducto button {
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+  }
+  .grillaproducto .grillaproducto__texto {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
