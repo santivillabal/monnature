@@ -1,0 +1,14 @@
+$colores: ("lila": #dc5de4, "amarillo": #f9b80a, "blanco": #ffffff, "negro": #000000);
+
+$lila: #dc5de4;
+$amarillo: #f9b80a;
+$blanco: #ffffff;
+$negro: #000000;
+
+@mixin titulo1 ($alineacion, $tamaño, $fuente){
+    text-align: $alineacion;
+    font-size: $tamaño;
+    font-family: $fuente;
+    }
+
+$texto: normal 1rem/2rem Rubik;

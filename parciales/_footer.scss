@@ -1,5 +1,5 @@
 .footer{
-    background-color: $negro;
+    background-color: map-get($colores, negro);
     padding: 2rem;
     &__redes{
         display: flex;
@@ -7,26 +7,31 @@
         align-items: flex-end;
         justify-content: start;
         }
-        & h2{
+        & p{
+            font-size: 2rem;
             font-family: 'Rubik';
             text-align: right;
             font-weight: lighter;
-            color: $amarillo;
+            line-height: normal;
+            color: map-get($colores, amarillo);
             }
     &__redes__icon{
         display: flex;
         flex-direction: row;
         }
             & img{
+            @extend .catalogo__img;
             width: 2rem;
             align-self: end;
             margin: 0.5rem;
             }
-    &__mail h2{
+    &__mail p{
+      font-size: 2rem;
       text-align: left;
       font-family: 'Rubik';
       font-weight: lighter;
-      color: $amarillo;
+      line-height: normal;
+      color: map-get($colores, amarillo);
       margin-bottom: 1rem;
       }
         &__input{
@@ -37,14 +42,13 @@
             font-family: 'Rubik';
             font-weight: normal;
             letter-spacing: 1px;
-            background-color: #dc5de4;
+            background-color: map-get($colores, lila);
             border-style: none;
-            color: $blanco;
+            color: map-get($colores, blanco);
             border-radius: 60px;
             margin-top: 0.5rem;
             }
 .footer__mail__boton:hover{
-            background-color: $lila;
-            color: $negro;
+            color: map-get($colores, negro);
             }
 }

@@ -15,9 +15,6 @@ h1 {
   margin-top: 5rem;
   margin-bottom: 6rem;
   color: #dc5de4;
-  text-align: center;
-  font-family: 'Rubik';
-  font-size: 4rem;
 }
 
 a:link, a:visited, a:active, a:hover {
@@ -170,79 +167,10 @@ header div {
           transform: scale(1.25);
 }
 
-.footer {
-  background-color: #000000;
-  padding: 2rem;
-}
-
-.footer__redes {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-}
-
-.footer h2 {
-  font-family: 'Rubik';
-  text-align: right;
-  font-weight: lighter;
-  color: #f9b80a;
-}
-
-.footer__redes__icon {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.footer img {
-  width: 2rem;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-  margin: 0.5rem;
-}
-
-.footer__mail h2 {
-  text-align: left;
-  font-family: 'Rubik';
-  font-weight: lighter;
-  color: #f9b80a;
-  margin-bottom: 1rem;
-}
-
-.footer__input {
-  padding: 1%;
-}
-
-.footer .footer__mail__boton {
-  padding: 1%;
-  font-family: 'Rubik';
-  font-weight: normal;
-  letter-spacing: 1px;
-  background-color: #dc5de4;
-  border-style: none;
-  color: #ffffff;
-  border-radius: 60px;
-  margin-top: 0.5rem;
-}
-
-.footer .footer__mail__boton:hover {
-  background-color: #dc5de4;
-  color: #000000;
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: Rubik;
 }
 
 .acercade p {
@@ -252,6 +180,12 @@ header div {
 .acercade__cosmetologa {
   width: 25rem;
   padding-bottom: 3rem;
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: Rubik;
 }
 
 .catalogo {
@@ -270,7 +204,7 @@ header div {
   font-weight: bold;
 }
 
-.catalogo__img {
+.catalogo__img, .footer img {
   width: 10rem;
   margin-bottom: 3rem;
   -webkit-transition: 1s, -webkit-transform;
@@ -279,9 +213,15 @@ header div {
   transition: transform, 1s, -webkit-transform;
 }
 
-.catalogo__img:hover {
+.catalogo__img:hover, .footer img:hover {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
+}
+
+h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: Rubik;
 }
 
 .contacto {
@@ -378,6 +318,84 @@ header div {
   font: normal 1rem/2rem Rubik;
 }
 
+.footer {
+  background-color: #000000;
+  padding: 2rem;
+}
+
+.footer__redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.footer p {
+  font-size: 2rem;
+  font-family: 'Rubik';
+  text-align: right;
+  font-weight: lighter;
+  line-height: normal;
+  color: #f9b80a;
+}
+
+.footer__redes__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer img {
+  width: 2rem;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  margin: 0.5rem;
+}
+
+.footer__mail p {
+  font-size: 2rem;
+  text-align: left;
+  font-family: 'Rubik';
+  font-weight: lighter;
+  line-height: normal;
+  color: #f9b80a;
+  margin-bottom: 1rem;
+}
+
+.footer__input {
+  padding: 1%;
+}
+
+.footer .footer__mail__boton {
+  padding: 1%;
+  font-family: 'Rubik';
+  font-weight: normal;
+  letter-spacing: 1px;
+  background-color: #dc5de4;
+  border-style: none;
+  color: #ffffff;
+  border-radius: 60px;
+  margin-top: 0.5rem;
+}
+
+.footer .footer__mail__boton:hover {
+  color: #000000;
+}
+
 @media screen and (max-width: 768px) {
   h1 {
     font-size: 3rem;
@@ -410,7 +428,7 @@ header div {
   .catalogo h1 {
     padding: 3rem;
   }
-  .catalogo__img {
+  .catalogo__img, .footer img {
     width: 5rem;
     margin-bottom: 2rem;
   }
@@ -494,7 +512,7 @@ header div {
     padding-left: 0rem;
     padding-right: 0rem;
   }
-  .catalogo__img {
+  .catalogo__img, .footer img {
     width: 5rem;
   }
   .grillaproducto {

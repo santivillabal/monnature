@@ -1,3 +1,6 @@
+h1{
+  @include titulo1(center, 4rem, Rubik)
+}
 .acercade p{
   font: $texto;
   }

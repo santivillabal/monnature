@@ -1,3 +1,6 @@
+h1{
+  @include titulo1(center, 4rem, Rubik)
+}
 .catalogo{
     grid-row-gap: 4rem;
     justify-content: space-evenly;

@@ -1,3 +1,6 @@
+h1{
+  @include titulo1(center, 4rem, Rubik)
+}
 .contacto{
     display: grid;
     grid-template-rows: 0.5fr, 2fr;
