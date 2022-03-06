@@ -47,63 +47,71 @@
         line-height: 1.5rem;
       }  
     }
+    .contacto{
+      &__form{
+        justify-items: center;
+        padding-left: 25%;
+        padding-right: 25%;
+      }
+      & input{
+        margin-bottom: 0.5rem;
+      }
+      &__boton{
+        padding: 1.5%;
+      }
+      & h1{
+        margin-top: 0rem;
+        padding-top: 3rem;
+        margin-bottom: 3.5rem;
+      }
+    }
 }
-  @media screen and (max-width: 425px) {
+@media screen and (max-width: 425px) {
     h1{
       margin-top: 2rem;
       margin-bottom: 4rem;
       font-size: 2rem;
     }
-    header a img{
+    header svg{
       max-width: 100%;
       padding-left: 2rem;
       padding-right: 2rem;
       padding-bottom: 1rem;
+      margin-top: 0rem;
     }
     .destacado{
       margin-bottom: 3rem;
       & h2{
         text-align: center;
         font-size: 1.5rem;
-        }
+      }
       & a{
         font-size: small;
-        }
+      }
       &__prod{
         padding-bottom: 1rem;
         & img{
           width: 5rem;
-         }
+        }
       }
     }
-    .footer__redes__icon{
-      padding-top: 0rem;
-      & img{
-        margin-left: 1rem;
-        }
+    .acercade{
+      & p{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+      }
+      &__cosmetologa{
+        width: 18rem;
+        padding-left: 5rem;
+        padding-right: 5rem;
+        padding-bottom: 3rem;
+      }
+      & h1{
+        font-size: 2.5rem;
+      }
     }
-    .footer__mail h2{
-        margin-bottom: 0.5rem;
-    }
-    .footer__mail__input{
-        margin-bottom: 0rem;
-    }
-    .acercade p{
-      padding-left: 2rem;
-      padding-right: 2rem;
-      font-size: 0.8rem;
-      line-height: 1.5rem;
-    }
-    .acercade__cosmetologa{
-      width: 18rem;
-      padding-left: 5rem;
-      padding-right: 5rem;
-      padding-bottom: 3rem;
-    }
-    .acercade h1{
-    font-size: 2.5rem;
-    }
-
     .catalogo{
         margin-bottom: 3rem;
         & h1{
@@ -112,31 +120,71 @@
             padding-bottom: 3rem;
             padding-left: 0rem;
             padding-right: 0rem;
-            }
+        }
         &__img{
             width: 5rem;
-            }
+        }
     }
     .grillaproducto{
         margin-bottom: 3rem;
         & img{
-            width: 10rem;
-            }
+          width: 10rem;
+        }
         & h2{
-            text-align: left;
-            justify-self: center;
-            font-size: 2rem;
-            margin-left: 2rem;
-            }
+          text-align: left;
+          justify-self: center;
+          font-size: 2rem;
+          margin-left: 2rem;
+        }
         & button{
           margin-top: 0.5rem;
           margin-left: 2rem;
-          }
-      .grillaproducto__texto{
+        }
+        &__texto{
           font-size: 0.8rem;
           line-height: 1.5rem;
           margin-left: 2rem;
           margin-right: 2rem;
-          }        
+        }        
+    }
+  .contacto{
+    &__form{
+      padding-left: 2rem;
+      padding-right: 1rem;
+    }
+    & input{
+      margin-bottom: 0.5rem;
+    }
+    &__boton{
+      padding: 1.5%;
+    }
+    & h1{
+      margin-top: 0rem;
+      padding-top: 3rem;
+      margin-bottom: 3.5rem;
+    }
+  }
+  .footer{
+    &__redes{
+      &__icon{
+          padding-top: 0rem;
+          & img{
+              width: 2rem;
+              margin-left: 1rem;
+          }
+      }
+      &__texto{
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+    &__mail{
+      &__texto{
+        font-size: 1.5rem;
+      }
+      &__input{
+        margin-bottom: 0rem;
+      }
+    }
   }
 }  

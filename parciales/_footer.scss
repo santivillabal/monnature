@@ -6,38 +6,31 @@
         flex-direction: column;
         align-items: flex-end;
         justify-content: start;
-        }
-        & p{
-            font-size: 2rem;
-            font-family: 'Rubik';
+        &__texto{
+            @include textofooter (Rubik, 2rem, map-get($colores, amarillo), normal, lighter);
             text-align: right;
-            font-weight: lighter;
-            line-height: normal;
-            color: map-get($colores, amarillo);
-            }
-    &__redes__icon{
+        }
+        &__icon{
         display: flex;
         flex-direction: row;
-        }
             & img{
-            @extend .catalogo__img;
-            width: 2rem;
-            align-self: end;
-            margin: 0.5rem;
+                @extend .catalogo__img;
+                width: 2rem;
+                align-self: end;
+                margin: 0.5rem;
             }
-    &__mail p{
-      font-size: 2rem;
-      text-align: left;
-      font-family: 'Rubik';
-      font-weight: lighter;
-      line-height: normal;
-      color: map-get($colores, amarillo);
-      margin-bottom: 1rem;
-      }
+        }
+    }
+    &__mail{
+        &__texto{
+            @include textofooter (Rubik, 2rem, map-get($colores, amarillo), normal, lighter);
+            text-align: left;
+            margin-bottom: 1rem;
+        }
         &__input{
             padding: 1%;
-            }
-.footer__mail__boton{
+        }
+        &__boton{
             padding: 1%;
             font-family: 'Rubik';
             font-weight: normal;
@@ -47,8 +40,14 @@
             color: map-get($colores, blanco);
             border-radius: 60px;
             margin-top: 0.5rem;
-            }
-.footer__mail__boton:hover{
+        }
+        &__boton:hover{
             color: map-get($colores, negro);
-            }
+        }
+    }
+    &__copyright{
+        font: $texto;
+        color: gray;
+        text-align: center;
+    }
 }

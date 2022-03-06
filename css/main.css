@@ -35,25 +35,15 @@ a:hover {
   color: #dc5de4;
 }
 
-header {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 2fr, 1fr;
-      grid-template-rows: 2fr, 1fr;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+header div {
+  background-color: #f9b80a;
 }
 
-header a img {
+header svg {
   max-width: 100%;
   padding-left: 5rem;
   padding-right: 5rem;
-  padding-bottom: 2rem;
-}
-
-header div {
-  background-color: #f9b80a;
+  padding-top: 2rem;
 }
 
 .navbar {
@@ -85,6 +75,15 @@ header div {
 
 .me-auto {
   margin-left: auto;
+}
+
+.navbar-toggler {
+  border: 0rem;
+}
+
+.navbar-toggler:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .carrusel__img {
@@ -204,7 +203,7 @@ h1 {
   font-weight: bold;
 }
 
-.catalogo__img, .footer img {
+.catalogo__img, .footer__redes__icon img {
   width: 10rem;
   margin-bottom: 3rem;
   -webkit-transition: 1s, -webkit-transform;
@@ -213,49 +212,33 @@ h1 {
   transition: transform, 1s, -webkit-transform;
 }
 
-.catalogo__img:hover, .footer img:hover {
+.catalogo__img:hover, .footer__redes__icon img:hover {
   -webkit-transform: scale(1.25);
           transform: scale(1.25);
 }
 
-h1 {
-  text-align: center;
-  font-size: 4rem;
-  font-family: Rubik;
-}
-
 .contacto {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: 0.5fr, 2fr;
-      grid-template-rows: 0.5fr, 2fr;
-  grid-gap: 1rem;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: auto;
-  font-weight: bold;
-  background: #dc5de4;
   background: linear-gradient(310deg, #dc5de4 0%, #f9b80a 47%, #dc5de4 100%);
   padding-bottom: 10rem;
 }
 
 .contacto h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: Rubik;
   color: #ffffff;
+  padding-top: 2rem;
 }
 
-.contacto form {
+.contacto__form {
   font-family: 'Rubik';
   font-weight: normal;
   -webkit-box-align: right;
       -ms-flex-align: right;
           align-items: right;
   line-height: 2rem;
-  font-size: x-large;
+  font-size: large;
 }
 
 .contacto input {
@@ -265,7 +248,6 @@ h1 {
 .contacto__boton {
   padding: 3%;
   font-family: 'Rubik';
-  font-weight: normal;
   letter-spacing: 1px;
   background-color: #dc5de4;
   border-style: none;
@@ -318,6 +300,12 @@ h1 {
   font: normal 1rem/2rem Rubik;
 }
 
+.grillaproducto .grillaproducto__precio {
+  font: normal 1rem/2rem Rubik;
+  font-size: 1.5rem;
+  color: #f9b80a;
+}
+
 .footer {
   background-color: #000000;
   padding: 2rem;
@@ -339,13 +327,13 @@ h1 {
           justify-content: start;
 }
 
-.footer p {
+.footer__redes__texto {
+  font-family: Rubik;
   font-size: 2rem;
-  font-family: 'Rubik';
-  text-align: right;
-  font-weight: lighter;
-  line-height: normal;
   color: #f9b80a;
+  line-height: normal;
+  font-weight: lighter;
+  text-align: right;
 }
 
 .footer__redes__icon {
@@ -358,7 +346,7 @@ h1 {
           flex-direction: row;
 }
 
-.footer img {
+.footer__redes__icon img {
   width: 2rem;
   -ms-flex-item-align: end;
       -ms-grid-row-align: end;
@@ -366,21 +354,21 @@ h1 {
   margin: 0.5rem;
 }
 
-.footer__mail p {
+.footer__mail__texto {
+  font-family: Rubik;
   font-size: 2rem;
-  text-align: left;
-  font-family: 'Rubik';
-  font-weight: lighter;
-  line-height: normal;
   color: #f9b80a;
+  line-height: normal;
+  font-weight: lighter;
+  text-align: left;
   margin-bottom: 1rem;
 }
 
-.footer__input {
+.footer__mail__input {
   padding: 1%;
 }
 
-.footer .footer__mail__boton {
+.footer__mail__boton {
   padding: 1%;
   font-family: 'Rubik';
   font-weight: normal;
@@ -392,8 +380,14 @@ h1 {
   margin-top: 0.5rem;
 }
 
-.footer .footer__mail__boton:hover {
+.footer__mail__boton:hover {
   color: #000000;
+}
+
+.footer__copyright {
+  font: normal 1rem/2rem Rubik;
+  color: gray;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -428,7 +422,7 @@ h1 {
   .catalogo h1 {
     padding: 3rem;
   }
-  .catalogo__img, .footer img {
+  .catalogo__img, .footer__redes__icon img {
     width: 5rem;
     margin-bottom: 2rem;
   }
@@ -445,6 +439,22 @@ h1 {
     font-size: 0.8rem;
     line-height: 1.5rem;
   }
+  .contacto__form {
+    justify-items: center;
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+  .contacto input {
+    margin-bottom: 0.5rem;
+  }
+  .contacto__boton {
+    padding: 1.5%;
+  }
+  .contacto h1 {
+    margin-top: 0rem;
+    padding-top: 3rem;
+    margin-bottom: 3.5rem;
+  }
 }
 
 @media screen and (max-width: 425px) {
@@ -453,11 +463,12 @@ h1 {
     margin-bottom: 4rem;
     font-size: 2rem;
   }
-  header a img {
+  header svg {
     max-width: 100%;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-bottom: 1rem;
+    margin-top: 0rem;
   }
   .destacado {
     margin-bottom: 3rem;
@@ -474,18 +485,6 @@ h1 {
   }
   .destacado__prod img {
     width: 5rem;
-  }
-  .footer__redes__icon {
-    padding-top: 0rem;
-  }
-  .footer__redes__icon img {
-    margin-left: 1rem;
-  }
-  .footer__mail h2 {
-    margin-bottom: 0.5rem;
-  }
-  .footer__mail__input {
-    margin-bottom: 0rem;
   }
   .acercade p {
     padding-left: 2rem;
@@ -512,7 +511,7 @@ h1 {
     padding-left: 0rem;
     padding-right: 0rem;
   }
-  .catalogo__img, .footer img {
+  .catalogo__img, .footer__redes__icon img {
     width: 5rem;
   }
   .grillaproducto {
@@ -532,11 +531,43 @@ h1 {
     margin-top: 0.5rem;
     margin-left: 2rem;
   }
-  .grillaproducto .grillaproducto__texto {
+  .grillaproducto__texto {
     font-size: 0.8rem;
     line-height: 1.5rem;
     margin-left: 2rem;
     margin-right: 2rem;
+  }
+  .contacto__form {
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+  .contacto input {
+    margin-bottom: 0.5rem;
+  }
+  .contacto__boton {
+    padding: 1.5%;
+  }
+  .contacto h1 {
+    margin-top: 0rem;
+    padding-top: 3rem;
+    margin-bottom: 3.5rem;
+  }
+  .footer__redes__icon {
+    padding-top: 0rem;
+  }
+  .footer__redes__icon img {
+    width: 2rem;
+    margin-left: 1rem;
+  }
+  .footer__redes__texto {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .footer__mail__texto {
+    font-size: 1.5rem;
+  }
+  .footer__mail__input {
+    margin-bottom: 0rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -18,3 +18,9 @@
   .me-auto {
     margin-left: auto;
   }
+  .navbar-toggler{
+    border: 0rem;
+  }
+  .navbar-toggler:focus{
+    box-shadow: none;
+  }

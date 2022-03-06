@@ -11,4 +11,12 @@ $negro: #000000;
     font-family: $fuente;
     }
 
+@mixin textofooter ($fuente, $tamaño, $color, $interlinea, $peso){
+    font-family: $fuente;
+    font-size: $tamaño;
+    color: $color;
+    line-height: $interlinea;
+    font-weight: $peso;
+}
+
 $texto: normal 1rem/2rem Rubik;
