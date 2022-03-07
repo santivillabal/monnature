@@ -3,9 +3,10 @@
     background: linear-gradient(310deg, rgba(220,93,228,1) 0%, rgba(249,184,10,1) 47%, rgba(220,93,228,1) 100%);
     padding-bottom: 10rem;
     & h1{
-      @include titulo1(center, 2rem, Rubik);
+      @include titulo1(center, 4rem, Rubik);
       color: $blanco;
-      padding-top: 2rem;
+      padding-top: 5rem;
+      margin-top: 0rem;
       }
     &__form{
       font-family: 'Rubik';
@@ -13,12 +14,15 @@
       align-items: right;
       line-height: 2rem;
       font-size: large;
+      padding-left: 30%;
+      padding-right: 25%;
       }
     & input{
       margin-bottom: 1.5rem;
       }
     &__boton {
-      padding: 3%;
+      margin-top: 1rem;
+      padding: 1%;
       font-family: 'Rubik';
       letter-spacing: 1px;
       background-color: $lila;

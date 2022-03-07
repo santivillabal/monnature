@@ -5,12 +5,6 @@
     .destacado__prod{
       padding-bottom: 2rem;
     }
-    .footer__redes h2{
-      padding-bottom: 0rem;
-      &__icon img{
-        margin-left: 1rem;
-        }
-    }
     .acercade p{
       font-size: 0.8rem;
       line-height: 1.5rem;
@@ -63,6 +57,16 @@
         margin-top: 0rem;
         padding-top: 3rem;
         margin-bottom: 3.5rem;
+        font-size: 3rem;
+      }
+    }
+    .footer__redes{
+      & h2{
+      padding-bottom: 0rem;
+      }
+      &__icon img{
+        margin-left: 1rem;
+        width: 3.5rem;
       }
     }
 }
@@ -162,6 +166,7 @@
       margin-top: 0rem;
       padding-top: 3rem;
       margin-bottom: 3.5rem;
+      font-size: 2rem;
     }
   }
   .footer{

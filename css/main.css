@@ -217,49 +217,6 @@ h1 {
           transform: scale(1.25);
 }
 
-.contacto {
-  width: auto;
-  background: linear-gradient(310deg, #dc5de4 0%, #f9b80a 47%, #dc5de4 100%);
-  padding-bottom: 10rem;
-}
-
-.contacto h1 {
-  text-align: center;
-  font-size: 2rem;
-  font-family: Rubik;
-  color: #ffffff;
-  padding-top: 2rem;
-}
-
-.contacto__form {
-  font-family: 'Rubik';
-  font-weight: normal;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
-  line-height: 2rem;
-  font-size: large;
-}
-
-.contacto input {
-  margin-bottom: 1.5rem;
-}
-
-.contacto__boton {
-  padding: 3%;
-  font-family: 'Rubik';
-  letter-spacing: 1px;
-  background-color: #dc5de4;
-  border-style: none;
-  color: #ffffff;
-  border-radius: 60px;
-}
-
-.contacto__boton:hover {
-  background-color: #dc5de4;
-  color: #000000;
-}
-
 .grillaproducto {
   margin-top: 3rem;
   margin-bottom: 4rem;
@@ -304,6 +261,53 @@ h1 {
   font: normal 1rem/2rem Rubik;
   font-size: 1.5rem;
   color: #f9b80a;
+}
+
+.contacto {
+  width: auto;
+  background: linear-gradient(310deg, #dc5de4 0%, #f9b80a 47%, #dc5de4 100%);
+  padding-bottom: 10rem;
+}
+
+.contacto h1 {
+  text-align: center;
+  font-size: 4rem;
+  font-family: Rubik;
+  color: #ffffff;
+  padding-top: 5rem;
+  margin-top: 0rem;
+}
+
+.contacto__form {
+  font-family: 'Rubik';
+  font-weight: normal;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  line-height: 2rem;
+  font-size: large;
+  padding-left: 30%;
+  padding-right: 25%;
+}
+
+.contacto input {
+  margin-bottom: 1.5rem;
+}
+
+.contacto__boton {
+  margin-top: 1rem;
+  padding: 1%;
+  font-family: 'Rubik';
+  letter-spacing: 1px;
+  background-color: #dc5de4;
+  border-style: none;
+  color: #ffffff;
+  border-radius: 60px;
+}
+
+.contacto__boton:hover {
+  background-color: #dc5de4;
+  color: #000000;
 }
 
 .footer {
@@ -397,12 +401,6 @@ h1 {
   .destacado__prod {
     padding-bottom: 2rem;
   }
-  .footer__redes h2 {
-    padding-bottom: 0rem;
-  }
-  .footer__redes h2__icon img {
-    margin-left: 1rem;
-  }
   .acercade p {
     font-size: 0.8rem;
     line-height: 1.5rem;
@@ -454,6 +452,14 @@ h1 {
     margin-top: 0rem;
     padding-top: 3rem;
     margin-bottom: 3.5rem;
+    font-size: 3rem;
+  }
+  .footer__redes h2 {
+    padding-bottom: 0rem;
+  }
+  .footer__redes__icon img {
+    margin-left: 1rem;
+    width: 3.5rem;
   }
 }
 
@@ -551,6 +557,7 @@ h1 {
     margin-top: 0rem;
     padding-top: 3rem;
     margin-bottom: 3.5rem;
+    font-size: 2rem;
   }
   .footer__redes__icon {
     padding-top: 0rem;
