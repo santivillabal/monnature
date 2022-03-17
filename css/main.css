@@ -6,35 +6,6 @@
           box-sizing: border-box;
 }
 
-img {
-  display: block;
-  margin: auto;
-}
-
-h1 {
-  margin-top: 5rem;
-  margin-bottom: 6rem;
-  color: #dc5de4;
-}
-
-a:link, a:visited, a:active, a:hover {
-  text-decoration: none;
-  font-family: 'Rubik';
-  font-weight: normal;
-}
-
-a:link {
-  color: #000000;
-}
-
-a:visited {
-  color: #000000;
-}
-
-a:hover {
-  color: #dc5de4;
-}
-
 header div {
   background-color: #f9b80a;
 }
@@ -46,35 +17,32 @@ header svg {
   padding-top: 2rem;
 }
 
-.navbar {
+.navbar navbar-expand-lg navbar-light bg-light {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  font-weight: bolder;
+      -ms-flex-flow: row, nowrap;
+          flex-flow: row, nowrap;
+  justify-items: start;
   list-style: none;
-  padding: 0rem;
   margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
-.navbar li {
-  padding: 0.5rem;
+.navbar navbar-expand-lg navbar-light bg-lightli {
+  padding: 0rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
-.nav-link a:hover {
+.navbar-nav .nav-item:hover .nav-link {
   color: #dc5de4;
 }
 
 .me-auto {
   margin-left: auto;
+  justify-items: space-around;
 }
 
 .navbar-toggler {
@@ -97,35 +65,11 @@ header svg {
   color: #000000;
 }
 
-.carrusel__texto a {
-  background-color: #dc5de4;
-  border-radius: 1.5rem;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  color: #ffffff;
-  font-weight: normal;
-  padding: 2%;
-  text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -webkit-transition: 1s, -webkit-transform;
-  transition: 1s, -webkit-transform;
-  transition: transform, 1s;
-  transition: transform, 1s, -webkit-transform;
-}
-
-.carrusel__texto a:hover {
-  color: #000000;
-  -webkit-transform: scale(1.25);
-          transform: scale(1.25);
-}
-
 .carrusel__texto h2 {
   margin-bottom: 2%;
   font-family: 'Rubik';
-  text-align: center;
+  background-color: #ffffff;
+  padding: 0.5rem;
 }
 
 .destacado {
@@ -219,7 +163,7 @@ h1 {
 
 .grillaproducto {
   margin-top: 3rem;
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .grillaproducto img {
@@ -246,6 +190,7 @@ h1 {
   color: #ffffff;
   border-radius: 60px;
   margin-top: 2rem;
+  margin-left: 2rem;
 }
 
 .grillaproducto button:hover {
@@ -253,11 +198,11 @@ h1 {
   color: #000000;
 }
 
-.grillaproducto .grillaproducto__texto {
+.grillaproducto__texto {
   font: normal 1rem/2rem Rubik;
 }
 
-.grillaproducto .grillaproducto__precio {
+.grillaproducto__precio {
   font: normal 1rem/2rem Rubik;
   font-size: 1.5rem;
   color: #f9b80a;
@@ -372,7 +317,35 @@ h1 {
   padding: 1%;
 }
 
-.footer__mail__boton {
+.footer__copyright {
+  font: normal 1rem/2rem Rubik;
+  color: gray;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+h1 {
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  color: #dc5de4;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Rubik";
+  font-weight: normal;
+  color: #000000;
+}
+
+a:hover {
+  color: #dc5de4;
+}
+
+.boton {
   padding: 1%;
   font-family: 'Rubik';
   font-weight: normal;
@@ -384,14 +357,8 @@ h1 {
   margin-top: 0.5rem;
 }
 
-.footer__mail__boton:hover {
+.boton:hover {
   color: #000000;
-}
-
-.footer__copyright {
-  font: normal 1rem/2rem Rubik;
-  color: gray;
-  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -521,7 +488,7 @@ h1 {
     width: 5rem;
   }
   .grillaproducto {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
   .grillaproducto img {
     width: 10rem;
@@ -533,15 +500,18 @@ h1 {
     font-size: 2rem;
     margin-left: 2rem;
   }
-  .grillaproducto button {
+  .grillaproducto input {
     margin-top: 0.5rem;
     margin-left: 2rem;
   }
   .grillaproducto__texto {
     font-size: 0.8rem;
     line-height: 1.5rem;
-    margin-left: 2rem;
     margin-right: 2rem;
+    margin-left: 2rem;
+  }
+  .grillaproducto__precio {
+    margin: 2rem;
   }
   .contacto__form {
     padding-left: 2rem;

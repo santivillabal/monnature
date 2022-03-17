@@ -1,26 +1,25 @@
-.navbar{
+.navbar navbar-expand-lg navbar-light bg-light{
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    font-weight: bolder;
+    flex-flow: row, nowrap;
+    justify-items: start;
     list-style: none;
-    padding: 0rem;
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    &li{
+    padding: 0rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    }
   }
-  .navbar li{
-    padding: 0.5rem;
-  }
-  .nav-link a:hover{
-      color:$lila;
+  .navbar-nav .nav-item:hover .nav-link {
+    color: $lila;
   }
   .me-auto {
     margin-left: auto;
+    justify-items: space-around;
   }
   .navbar-toggler{
     border: 0rem;
-  }
-  .navbar-toggler:focus{
+    &:focus{
     box-shadow: none;
+    }
   }

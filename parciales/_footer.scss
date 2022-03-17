@@ -30,20 +30,6 @@
         &__input{
             padding: 1%;
         }
-        &__boton{
-            padding: 1%;
-            font-family: 'Rubik';
-            font-weight: normal;
-            letter-spacing: 1px;
-            background-color: map-get($colores, lila);
-            border-style: none;
-            color: map-get($colores, blanco);
-            border-radius: 60px;
-            margin-top: 0.5rem;
-        }
-        &__boton:hover{
-            color: map-get($colores, negro);
-        }
     }
     &__copyright{
         font: $texto;

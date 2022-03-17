@@ -7,17 +7,26 @@ h1{
     margin-bottom: 6rem;
     color: $lila;
 }
-a:link, a:visited, a:active, a:hover {
-  text-decoration:none;
+a{
+  text-decoration: none;
+  font-family: "Rubik";
+  font-weight: normal;
+  color: $negro;
+  &:hover{
+  color: $lila
+  }
+}
+.boton{
+  padding: 1%;
   font-family: 'Rubik';
   font-weight: normal;
-}
-a:link{
-  color: $negro;
-}
-a:visited{
-  color: $negro;
-}
-a:hover{
-  color: $lila;
+  letter-spacing: 1px;
+  background-color: map-get($colores, lila);
+  border-style: none;
+  color: map-get($colores, blanco);
+  border-radius: 60px;
+  margin-top: 0.5rem;
+  &:hover{
+  color: map-get($colores, negro);
+  }
 }

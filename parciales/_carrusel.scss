@@ -1,28 +1,14 @@
 .carrusel__img{
     height: 300px;
     object-fit: cover;
-  }
-  .carrusel__texto{
+}
+.carrusel__texto{
     bottom: 37.5%;
     color: $negro;
-  }
-  .carrusel__texto a{
-    background-color: $lila;
-    border-radius:1.5rem;
-    width: fit-content;
-    color:$blanco;    
-    font-weight: normal;
-    padding: 2%;
-    text-align: center;
-    align-self: center;
-    transition: transform, 1s;
-  }
-  .carrusel__texto a:hover{
-    color: $negro;
-    transform: scale(1.25);
-  }
-  .carrusel__texto h2{
+    & h2{
     margin-bottom: 2%;
     font-family: 'Rubik';
-    text-align: center;
-  }
+    background-color: $blanco;
+    padding: 0.5rem;
+    }
+}

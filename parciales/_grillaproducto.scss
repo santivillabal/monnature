@@ -1,9 +1,9 @@
 .grillaproducto{
     margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
     & img{
       width: 20rem;
-      }
+    }
     & h2{
       text-align: left;
       justify-self: left;
@@ -11,7 +11,7 @@
       font-family: 'Rubik';
       color: $lila;
       margin-bottom: 2rem;
-      }
+    }
     & button{
       padding: 0.5rem;
       font-family: 'Rubik';
@@ -22,17 +22,18 @@
       color: $blanco;
       border-radius: 60px;
       margin-top: 2rem;
-      }
+      margin-left: 2rem;
+    }
     & button:hover{
       background-color: $lila;
       color: $negro;
     }
-.grillaproducto__texto{
+    &__texto{
       font: $texto;
     }
-.grillaproducto__precio{
-  font: $texto;
-  font-size: 1.5rem;
-  color: $amarillo;
+    &__precio{
+      font: $texto;
+      font-size: 1.5rem;
+      color: $amarillo;
+    }
 }
-  }
