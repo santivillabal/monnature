@@ -1,0 +1,52 @@
+.carrito{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    & button{
+      padding: 0.3rem;
+      font-family: 'Rubik';
+      font-weight: normal;
+      letter-spacing: 1px;
+      background-color: $amarillo;
+      border-style: none;
+      color: $blanco;
+      border-radius: 60px;
+    }
+    & button:hover{
+      background-color: $amarillo;
+      color: $negro;
+    }
+    & h4{
+      color: $negro;
+    }
+    &__producto{
+      width: 10rem;
+    }
+    &__descripcion{
+      display: flex;
+      flex-direction: row;
+      padding-right: 3rem;
+      border: solid;
+      color: $lila;
+      align-items: center;
+      & h4{
+        font: $texto;
+        font-size: 1.5rem;
+      }
+    }
+    &__texto{
+      font: $texto;
+      color: $negro;
+      font-size: 1rem;
+    }
+    &__total{
+      font-size: 1.5rem;
+      color: $amarillo;
+    }
+    &__precio{
+      border: solid;
+      padding-left: 5rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      color: $lila;
+    }
+}

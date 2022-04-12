@@ -208,6 +208,75 @@ h1 {
   color: #f9b80a;
 }
 
+.carrito {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+}
+
+.carrito button {
+  padding: 0.3rem;
+  font-family: 'Rubik';
+  font-weight: normal;
+  letter-spacing: 1px;
+  background-color: #f9b80a;
+  border-style: none;
+  color: #ffffff;
+  border-radius: 60px;
+}
+
+.carrito button:hover {
+  background-color: #f9b80a;
+  color: #000000;
+}
+
+.carrito h4 {
+  color: #000000;
+}
+
+.carrito__producto {
+  width: 10rem;
+}
+
+.carrito__descripcion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding-right: 3rem;
+  border: solid;
+  color: #dc5de4;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carrito__descripcion h4 {
+  font: normal 1rem/2rem Rubik;
+  font-size: 1.5rem;
+}
+
+.carrito__texto {
+  font: normal 1rem/2rem Rubik;
+  color: #000000;
+  font-size: 1rem;
+}
+
+.carrito__total {
+  font-size: 1.5rem;
+  color: #f9b80a;
+}
+
+.carrito__precio {
+  border: solid;
+  padding-left: 5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #dc5de4;
+}
+
 .contacto {
   width: auto;
   background: linear-gradient(310deg, #dc5de4 0%, #f9b80a 47%, #dc5de4 100%);
