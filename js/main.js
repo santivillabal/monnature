@@ -50,6 +50,8 @@ function codigoDescuento (){
             mensaje.innerText = "Código inválido.";
     }
 }
+const boton = document.querySelector("#btn");
+boton.addEventListener("click", codigoDescuento);
 
 function elegirProducto(search){
 let buscar = catalogo.find(obj => {
