@@ -1,21 +1,41 @@
-class Producto{
-    constructor(nombre, id, precio, stock){
-        this.nombre = nombre;
-        this.id = id;
-        this.precio = precio;
-        this.stock = stock;
-        
+//ENTIDADES
+
+//VARIABLES
+
+//FUNCIONES
+
+const verificarStorage = () => {
+    let lista = [];
+    if(localStorage.getItem("Carrito") != null) {
+        lista = JSON.parse(localStorage.getItem("Carrito"));
+        return lista;
     }
 }
 
-const cremaCalmante = new Producto("Crema calmante", 1, 1250, 20);
-const desmaquillanteFacial = new Producto("Desmaquillante facial", 2, 1250, 24);
-const desodoranteEnCrema = new Producto("Desodorante en crema", 3, 1250, 10);
-const cremaParaManos = new Producto("Crema para manos", 4, 1250, 13);
+const eliminarProducto = (id) => {
+    let carrito = JSON.parse(localStorage.getItem("Carrito"));
+    let carritoFiltrado = carrito.filter(obj => producto.id != id);
+    localStorage.setItem("Carrito", JSON.stringify(carritoFiltrado));
+    location.reload();
+}
 
-let catalogo = [cremaCalmante, desmaquillanteFacial, desodoranteEnCrema, cremaParaManos];
+const imprimirEnCarrito = () => {
+    if (verificarStorage() != undefined) {
+        verificarStorage().forEach(producto => {
+            document.querySelector(table).innerHTML += `
+                <tr>
+                    <td>${producto.nombre}</td>
+                    <td>${producto.id}</td>
+                    <td>${producto.precio}</td>
+                    <td><button onclick="eliminarProducto(${obj.id})">X</button></td>
+                </tr>
+            `
+        })
+    }
+}
 
-let carrito = [];
+const btnCarrito = document.querySelector(".verCarrito");
+btnCarrito.addEventListener("click", imprimirEnCarrito);
 
 function controlDeStock(cantidad) {  
     if (this.stock >= cantidad) {
@@ -53,18 +73,4 @@ function codigoDescuento (){
 const boton = document.querySelector("#btn");
 boton.addEventListener("click", codigoDescuento);
 
-function elegirProducto(search){
-let buscar = catalogo.find(obj => {
-    return obj.id == search;
-    })
-}
-
-function compra(){
-    let search = prompt("Elija un producto");
-    elegirProducto(search)
-    let cantidad = parseInt(prompt("Qué cantidad desea comprar?"));
-    let codigo = prompt("Ingrese su código de descuento");
-    controlDeStock(cantidad);
-    codigoDescuento(codigo);
-}
 
