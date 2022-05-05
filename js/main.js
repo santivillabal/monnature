@@ -4,6 +4,8 @@
 
 //FUNCIONES
 
+
+
 const verificarStorage = () => {
     let lista = [];
     if(localStorage.getItem("Carrito") != null) {
@@ -48,11 +50,26 @@ function controlDeStock(cantidad) {
     }
 }
 
+
+         //FUNCIONES BIEN//
+
+function iva(precioTotal){
+    return precioTotal - precioTotal*0.21;
+}
+
+const sumatoriaCarrito = () =>{
+    let sumatoria = 0;
+    for(let producto of carrito){
+        sumatoria = sumatoria + producto.precio;
+    }
+    return iva(sumatoria);
+}
+
 function codigoDescuento (){
     let codigo = document.getElementById("codigo").value;
     let carrito__total = document.getElementById("total");
     let mensaje = document.getElementById("mensaje");
-    let precioPorCantidad = 1512.5;
+    let precioPorCantidad = sumatoriaCarrito(carrito);
     switch (codigo){
         case "DTO10":
             carrito__total.innerText = `Total: $${(precioPorCantidad - (precioPorCantidad * 10 / 100))}.`;
