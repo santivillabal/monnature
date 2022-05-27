@@ -1,0 +1,30 @@
+[
+    {
+        "nombre": "Desodorante en crema",
+        "id": 1,
+        "precio": 1250,
+        "stock": 2,
+        "foto": "../img/fotoProducto2.png"
+    },
+    {
+        "nombre": "Desmaquillante facial",
+        "id": 2,
+        "precio": 1000,
+        "stock": 24,
+        "foto": "../img/fotoProducto1.png"
+    },
+    {
+        "nombre": "Crema calmante",
+        "id": 3,
+        "precio": 1300,
+        "stock": 100,
+        "foto": "../img/fotoProducto4.png"
+    },
+    {
+        "nombre": "Crema para manos",
+        "id": 4,
+        "precio": 1420,
+        "stock": 13,
+        "foto": "../img/fotoProducto3.png"
+    }
+]

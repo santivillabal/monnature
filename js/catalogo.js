@@ -1,270 +1,178 @@
-class Producto{
-    constructor(nombre, id, precio, stock){
-        this.nombre = nombre;
-        this.id = id;
-        this.precio = precio;
-        this.stock = stock;
-        
+const cart = document.querySelector("#cart")
+const cartModalOverlay = document.querySelector(".cart-modal-overlay")
+const closeBtn = document.querySelector("#close-btn")
+const cards = document.getElementById("cards")
+const templateCard = document.getElementById("template-card").content
+const fragment = document.createDocumentFragment()
+const templateFooter = document.getElementById("template-footer").content
+const templateCarrito = document.getElementById("template-carrito").content
+const items = document.getElementById("items")
+const footer = document.getElementById("footer")
+let carrito = {}
+
+
+cart.addEventListener("click", () =>{
+    cartModalOverlay.classList.add("open")
+})
+closeBtn.addEventListener("click", () =>{
+    cartModalOverlay.classList.remove("open")
+})
+cartModalOverlay.addEventListener("click", (e) =>{
+    if(e.target.classList.contains("cart-modal-overlay")){
+        cartModalOverlay.classList.remove("open")
+    }
+})
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetchData()
+})
+
+cards.addEventListener("click", e => {
+    agregarCarrito(e)
+})
+
+items.addEventListener("click", e =>{
+    btnAccion(e)
+})
+
+const fetchData = async() =>{
+    try {
+        const res = await fetch("api.json")
+        const data = await res.json()
+        catalogo(data)
+    }
+    catch (error){
+        console.log(error)
     }
 }
 
-const cremaCalmante = new Producto("Crema calmante", 1, 1250, 20);
-const desmaquillanteFacial = new Producto("Desmaquillante facial", 2, 1000, 24);
-const desodoranteEnCrema = new Producto("Desodorante en crema", 3, 1300, 100);
-const cremaParaManos = new Producto("Crema para manos", 4, 1420, 13);
+const catalogo = data =>{
+    data.forEach(producto => {
+        templateCard.querySelector("h5").textContent = producto.nombre
+        templateCard.querySelector("#precio").textContent = producto.precio
+        templateCard.querySelector(".fotoproducto").setAttribute("src", producto.foto)
+        templateCard.querySelector(".btn-dark").dataset.id = producto.id
+        let stock = producto.stock
 
-let carrito = [];
-localStorage.setItem("Carrito", JSON.stringify(carrito));
+        const clon = templateCard.cloneNode(true)
+        fragment.appendChild(clon)
+    })
+    cards.appendChild(fragment)
+}
+
+const agregarCarrito = e => {
+    if (e.target.classList.contains("btn-dark")){
+        setCarrito(e.target.parentElement)
+    }
+    e.stopPropagation()
+}
+
+const setCarrito = objeto =>{
+    const producto = {
+        id: objeto.querySelector(".btn-dark").dataset.id,
+        nombre: objeto.querySelector("h5").textContent,
+        precio: objeto.querySelector("#precio").textContent,
+        cantidad: 1,
+    }
+    if (carrito.hasOwnProperty(producto.id)){
+        //producto.cantidad = carrito[producto.id].cantidad + 1
+        swal("Este producto ya está en el carrito")
+    }
+    carrito[producto.id] = {...producto}
+    listarCarrito()
+}
 
 
-//PRODUCTO 1
-const agregarAlCarrito1 = () =>{
-    const cantidad1 = document.querySelector("#cant1");
-    if (cantidad1.value < desodoranteEnCrema.stock) {
-        desodoranteEnCrema.stock - cantidad1.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(desodoranteEnCrema);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(desodoranteEnCrema);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
+
+const listarCarrito = () => {
+    items.innerHTML = ""
+    Object.values(carrito).forEach(producto =>{
+        templateCarrito.querySelector("th").textContent = producto.id
+        templateCarrito.querySelectorAll("td")[0].textContent = producto.nombre
+        templateCarrito.querySelectorAll("td")[1].textContent = producto.cantidad
+        templateCarrito.querySelector(".btn-info").dataset.id = producto.id
+        templateCarrito.querySelector(".btn-danger").dataset.id = producto.id
+        templateCarrito.querySelector("span").textContent = producto.cantidad * producto.precio
+
+        const clon = templateCarrito.cloneNode(true)
+        fragment.appendChild(clon)
+    })
+    items.appendChild(fragment)
+    listarFooter()
+}
+
+const listarFooter = () => {
+    footer.innerHTML = ""
+    if (Object.keys(carrito).length === 0) {
+        footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío</th>`
+        return
+    }
+    const nCantidad = Object.values(carrito).reduce((acc, {cantidad}) => acc + cantidad, 0)
+    const nPrecio = Object.values(carrito).reduce((acc, {cantidad, precio}) => acc + cantidad * precio, 0)
+    templateFooter.querySelectorAll("td")[0].textContent = nCantidad
+    document.querySelector(".cart-quantity").textContent = nCantidad
+    templateFooter.querySelector("span").textContent = nPrecio
+
+    const clon = templateFooter.cloneNode(true)
+    fragment.appendChild(clon)
+    footer.appendChild(fragment)
+    const btnVaciar = document.getElementById("vaciar-carrito")
+    btnVaciar.addEventListener("click", () => {
+        carrito = {}
+        document.querySelector(".cart-quantity").textContent = 0
+        listarCarrito()
+    })
+}
+
+const btnAccion = e =>{
+    if(e.target.classList.contains("btnmas")) {
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad ++
+        carrito[e.target.dataset.id] = {...producto}
+        listarCarrito()
+    }
+    if(e.target.classList.contains("btnmenos")) {
+        const producto = carrito[e.target.dataset.id]
+        producto.cantidad --
+        carrito[e.target.dataset.id] = {...producto}
+        listarCarrito()
+        if(producto.cantidad === 0){
+            delete carrito[e.target.dataset.id]
         }
+        listarCarrito()
     }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + desodoranteEnCrema.stock + " unidades.");
-    }    
+    e.stopPropagation()
 }
-const aniadir1 = document.querySelector("#btn1");
-aniadir1.addEventListener("click", agregarAlCarrito1);
 
-//PRODUCTO 2
-const agregarAlCarrito2 = () =>{
-    const cantidad2 = document.querySelector("#cant2");
-    if (cantidad2.value < desmaquillanteFacial.stock) {
-        desmaquillanteFacial.stock - cantidad2.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(desmaquillanteFacial);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(desmaquillanteFacial);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + desmaquillanteFacial.stock + " unidades.");
-    }    
-}
-const aniadir2 = document.querySelector("#btn2");
-aniadir2.addEventListener("click", agregarAlCarrito2);
 
-//PRODUCTO 3
-const agregarAlCarrito3 = () =>{
-    const cantidad3 = document.querySelector("#cant3");
-    if (cantidad3.value < cremaCalmante.stock) {
-        cremaCalmante.stock - cantidad3.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(cremaCalmante);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(cremaCalmante);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + cremaCalmante.stock + " unidades.");
-    }    
-}
-const aniadir3 = document.querySelector("#btn3");
-aniadir3.addEventListener("click", agregarAlCarrito3);
 
-//PRODUCTO 4
-const agregarAlCarrito4 = () =>{
-    const cantidad4 = document.querySelector("#cant4");
-    if (cantidad4.value < cremaParaManos.stock) {
-        cremaParaManos.stock - cantidad4.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(cremaParaManos);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(cremaParaManos);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + cremaParaManos.stock + " unidades.");
-    }    
-}
-const aniadir4 = document.querySelector("#btn4");
-aniadir4.addEventListener("click", agregarAlCarrito4);
 
-//PRODUCTO 5
-const agregarAlCarrito5 = () =>{
-    const cantidad5 = document.querySelector("#cant5");
-    if (cantidad5.value < desodoranteEnCrema.stock) {
-        desodoranteEnCrema.stock - cantidad5.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(desodoranteEnCrema);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(desodoranteEnCrema);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + desodoranteEnCrema.stock + " unidades.");
-    }    
-}
-const aniadir5 = document.querySelector("#btn5");
-aniadir5.addEventListener("click", agregarAlCarrito5);
 
-//PRODUCTO 6
-const agregarAlCarrito6 = () =>{
-    const cantidad6 = document.querySelector("#cant6");
-    if (cantidad6.value < desmaquillanteFacial.stock) {
-        desmaquillanteFacial.stock - cantidad6.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(desmaquillanteFacial);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(desmaquillanteFacial);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + desmaquillanteFacial.stock + " unidades.");
-    }    
-}
-const aniadir6 = document.querySelector("#btn6");
-aniadir6.addEventListener("click", agregarAlCarrito6);
 
-//PRODUCTO 7
-const agregarAlCarrito7 = () =>{
-    const cantidad7 = document.querySelector("#cant7");
-    if (cantidad7.value < cremaCalmante.stock) {
-        cremaCalmante.stock - cantidad7.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(cremaCalmante);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(cremaCalmante);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + cremaCalmante.stock + " unidades.");
-    }    
-}
-const aniadir7 = document.querySelector("#btn3");
-aniadir7.addEventListener("click", agregarAlCarrito7);
 
-//PRODUCTO 8
-const agregarAlCarrito8 = () =>{
-    const cantidad8 = document.querySelector("#cant8");
-    if (cantidad8.value < cremaParaManos.stock) {
-        cremaParaManos.stock - cantidad8.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(cremaParaManos);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(cremaParaManos);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + cremaParaManos.stock + " unidades.");
-    }    
-}
-const aniadir8 = document.querySelector("#btn8");
-aniadir4.addEventListener("click", agregarAlCarrito8);
 
-//PRODUCTO 9
-const agregarAlCarrito9 = () =>{
-    const cantidad9 = document.querySelector("#cant9");
-    if (cantidad9.value < desodoranteEnCrema.stock) {
-        desodoranteEnCrema.stock - cantidad9.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(desodoranteEnCrema);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(desodoranteEnCrema);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + desodoranteEnCrema.stock + " unidades.");
-    }    
-}
-const aniadir9 = document.querySelector("#btn9");
-aniadir9.addEventListener("click", agregarAlCarrito9);
 
-//PRODUCTO 10
-const agregarAlCarrito10 = () =>{
-    const cantidad10 = document.querySelector("#cant10");
-    if (cantidad10.value < desmaquillanteFacial.stock) {
-        desmaquillanteFacial.stock - cantidad10.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(desmaquillanteFacial);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(desmaquillanteFacial);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + desmaquillanteFacial.stock + " unidades.");
-    }    
-}
-const aniadir10 = document.querySelector("#btn10");
-aniadir10.addEventListener("click", agregarAlCarrito10);
-
-//PRODUCTO 11
-const agregarAlCarrito11 = () =>{
-    const cantidad11 = document.querySelector("#cant11");
-    if (cantidad11.value < cremaCalmante.stock) {
-        cremaCalmante.stock - cantidad11.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(cremaCalmante);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(cremaCalmante);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + cremaCalmante.stock + " unidades.");
-    }    
-}
-const aniadir11 = document.querySelector("#btn11");
-aniadir11.addEventListener("click", agregarAlCarrito11);
-
-//PRODUCTO 12
-const agregarAlCarrito12 = () =>{
-    const cantidad12 = document.querySelector("#cant12");
-    if (cantidad12.value < cremaParaManos.stock) {
-        cremaParaManos.stock - cantidad12.value;
-        if (localStorage.getItem("Carrito") != null){
-            carrito = JSON.parse(localStorage.getItem("Carrito"));
-            carrito.push(cremaParaManos);
-            localStorage.setItem("Carrito", JSON.stringify(carrito));
-        } else {
-            carrito.push(cremaParaManos);
-            localStorage.setItem("Carrito", JSON.stringify(carrito))
-        }
-    }
-    else{
-        swal("No hay suficiente stock de este producto. En este momento quedan " + cremaParaManos.stock + " unidades.");
-    }    
-}
-const aniadir12 = document.querySelector("#btn12");
-aniadir12.addEventListener("click", agregarAlCarrito12);
+// //PRODUCTO 1
+// const agregarAlCarrito1 = () =>{
+//     const cantidad1 = document.querySelector("#cant1");
+//     if (cantidad1.value < desodoranteEnCrema.stock) {
+//         desodoranteEnCrema.stock - cantidad1.value;
+//         if (localStorage.getItem("Carrito") != null){
+//             carrito = JSON.parse(localStorage.getItem("Carrito"));
+//             carrito.push(desodoranteEnCrema);
+//             localStorage.setItem("Carrito", JSON.stringify(carrito));
+//         } else {
+//             carrito.push(desodoranteEnCrema);
+//             localStorage.setItem("Carrito", JSON.stringify(carrito));
+//         }
+//     }
+//     else{
+//         swal("No hay suficiente stock de este producto. En este momento quedan " + desodoranteEnCrema.stock + " unidades.");
+//     }    
+// }
+// const aniadir1 = document.querySelector("#btn1");
+// aniadir1.addEventListener("click", agregarAlCarrito1);

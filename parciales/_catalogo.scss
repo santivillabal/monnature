@@ -12,8 +12,9 @@ h1{
     text-align: center;
     font-weight: bold;
     &__img{
-      width: 10rem;
+      width: 7rem;
       margin-bottom: 3rem;
+      margin-top: 3rem;
       transition: transform, 1s;
       }
     &__img:hover{
