@@ -1,65 +1,4 @@
-.carrito{
-    margin-top: 3rem;
-    margin-bottom: 5rem;
-    & button{
-      padding: 0.3rem;
-      font-family: 'Rubik';
-      font-weight: normal;
-      letter-spacing: 1px;
-      background-color: $amarillo;
-      border-style: none;
-      color: $blanco;
-      border-radius: 60px;
-    }
-    & button:hover{
-      background-color: $amarillo;
-      color: $negro;
-    }
-    & h4{
-      color: $negro;
-    }
-    &__producto{
-      width: 10rem;
-    }
-    &__descripcion{
-      display: flex;
-      flex-direction: row;
-      padding-right: 3rem;
-      border: solid;
-      color: $lila;
-      align-items: center;
-      & h4{
-        font: $texto;
-        font-size: 1.5rem;
-      }
-    }
-    &__icono{
-      color: $negro;
-      margin-left: 1rem;
-    }
-    &__texto{
-      font: $texto;
-      color: $negro;
-      font-size: 1rem;
-    }
-    &__total{
-      font-size: 1.5rem;
-      color: $amarillo;
-    }
-    &__precio{
-      border: solid;
-      padding-left: 5rem;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
-      color: $lila;
-    }
-}
-
-
-//Carrito overlay
-
 .cart-modal-overlay {
-  padding-left: 1rem;
   position: fixed;
   width: 100vw;
   height: 100%;
@@ -73,7 +12,7 @@
 .cart-modal {
   height: 100vh;
   width: 50%;
-  background-color: rgb(50,50,50);
+  background-color: $amarillo;
   float: right;
   overflow: scroll;
   overflow-x: hidden;
@@ -83,110 +22,29 @@
   font-size: 1.5rem;
   float: right;
   margin: .5em 2em 0 0;
-  color: white;
+  color: $negro;
   cursor: pointer;
 }
 
-.cart-is-empty {
-  color: white;
-  text-align: center;
-  font-size: 1.5rem;
-  margin-bottom: 1em;
-  display: none;
-  
+.descuento {
+  padding-left: 2rem;
+  padding-top: 1rem;
 }
 
-.total {
-  text-align: center;
-  margin: 2em 0 2em 0;
-/*   display: none; */
+.botoncarrito {
+  margin-bottom: 1rem;
 }
 
-.cart-total {
-  color: white;
+.textocarrito {
+  font: $texto;
 }
 
-.total-price {
-  color: white;
-  font-size: 2rem;
-  display: block;
-}
-
-.purchase-btn {
-  font-size: 1rem;
-  font-weight: bolder;
-  background-color: green;
-  color: white;
-  padding: 1em 2em;
-  border-radius: 10px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  margin: 2em 0 1em 0;
-}
-
-.product-rows {
-  margin-top: 3em;
-  width: 95%;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
-.product-row {
-  display: flex;
-  align-items: center;
-}
-
-.cart-image {
-  width: 10rem;
-  margin: 1em;
-}
-
-.cart-price {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bolder;
-}
-
-.product-quantity {
-  width: 4rem;
-  font-size: 2rem;
-  margin-left: 3rem;
-}
-
-.remove-btn {
-  padding: 1em 2em;
-  background-color: red;
-  color: white;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  margin-left: 3rem;
-  font-weight: bolder;
-  font-size: 1rem;
-}
-
-.remove-btn:active {
-  transform: translateY(5px);
+.totalcarrito {
+  font-size: 1.5rem;;
 }
 
 @media (max-width: 1000px){
   .cart-modal {
     width: 100vw;
-  } 
-  
-  .product-row {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 2em;
-  }
-  
-  .remove-btn {
-    margin: 0
-  }
-  
-  .product-quantity {
-    margin: .5em 0 .5em 0
   }
 }
