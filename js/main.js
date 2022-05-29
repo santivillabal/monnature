@@ -53,7 +53,7 @@ const fetchData = async() =>{
 const catalogo = data =>{
     data.forEach(producto => {
         templateCard.querySelector("h5").textContent = producto.nombre
-        templateCard.querySelector("#precio").textContent = "$" + producto.precio
+        templateCard.querySelector("#precio").textContent = producto.precio
         templateCard.querySelector(".fotoproducto").setAttribute("src", producto.foto)
         templateCard.querySelector(".botoncard").dataset.id = producto.id
         let stock = producto.stock
